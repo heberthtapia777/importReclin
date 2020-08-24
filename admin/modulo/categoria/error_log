@@ -1,0 +1,6 @@
+[10-Aug-2017 18:47:57 America/La_Paz] PHP Warning:  include(delCategoria.php): failed to open stream: No such file or directory in /home1/monkydj/tractorepuestoscat.com/demo/admin/modulo/categoria/index.php on line 470
+[10-Aug-2017 18:47:57 America/La_Paz] PHP Warning:  include(delCategoria.php): failed to open stream: No such file or directory in /home1/monkydj/tractorepuestoscat.com/demo/admin/modulo/categoria/index.php on line 470
+[10-Aug-2017 18:47:57 America/La_Paz] PHP Warning:  include(): Failed opening 'delCategoria.php' for inclusion (include_path='.:/opt/php56/lib/php') in /home1/monkydj/tractorepuestoscat.com/demo/admin/modulo/categoria/index.php on line 470
+[10-Aug-2017 18:50:24 America/La_Paz] PHP Warning:  include(delCategoria.php): failed to open stream: No such file or directory in /home1/monkydj/tractorepuestoscat.com/demo/admin/modulo/categoria/index.php on line 470
+[10-Aug-2017 18:50:24 America/La_Paz] PHP Warning:  include(delCategoria.php): failed to open stream: No such file or directory in /home1/monkydj/tractorepuestoscat.com/demo/admin/modulo/categoria/index.php on line 470
+[10-Aug-2017 18:50:24 America/La_Paz] PHP Warning:  include(): Failed opening 'delCategoria.php' for inclusion (include_path='.:/opt/php56/lib/php') in /home1/monkydj/tractorepuestoscat.com/demo/admin/modulo/categoria/index.php on line 470
