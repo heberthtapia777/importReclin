@@ -1,3 +1,14 @@
+<?PHP
+	include 'admin/adodb5/adodb.inc.php';
+	include 'admin/inc/function.php';
+	
+	$db = NewADOConnection('mysqli');
+	//$db->debug = true;
+	$db->Connect();
+	
+	$op = new cnFunction();
+?>
+
 <!doctype html>
 <html lang="es">
   <head>
@@ -50,7 +61,6 @@
         </div>
     </div>  <!--End fondo logotipo -->
     <!-- Main area start -->
-    
 <nav class="navbar navbar-expand-lg gris navbar-dark scrolling-navbar">
   <div class="container">
     <a class="navbar-brand" href="#"><img src="images/logo_technosoft.png" alt="logo-technosoft" class="img-fuid" width="250" height="auto"></a>
@@ -67,13 +77,17 @@
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle active" href="nuestros-servicios" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Nuestros productos</a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <a class="dropdown-item" href="nuestros_productos">categoria 1</a>
-            <a class="dropdown-item" href="nuestros_productos">categoria 2</a>
-            <a class="dropdown-item" href="nuestros_productos">categoria 3</a>
-            <a href="nuestros_productos" class="dropdown-item">categoria 4</a>
-            <a href="nuestros_productos" class="dropdown-item">categoria 5</a>
-          </div>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+		        <?php
+			        $q = 'SELECT * FROM categoria';
+			        $exe = $db->Execute($q);
+			        while ($reg = $exe->FetchRow()){
+				        ?>
+                        <a class="dropdown-item" href="nuestros_productos?idCat=<?=$reg['id_categoria'];?>&name=<?=$reg['name']?>"><?=$reg['name'];?></a>
+				        <?PHP
+			        }
+		        ?>
+            </div>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="contactanos">Contactanos</a>
@@ -81,49 +95,156 @@
       </ul>
     </div>
   </div>
-</nav>        
-<section>
-    <div class="text-center mt-4 mb-4">
-        <h2 class="titulo">Detalle del nombre del producto</h2>
+</nav>
+    <?php
+	    $id = $_GET['idPro'];
+        
+        $sql1 = 'SELECT r.name, r.detail, f.name, r.id_categoria FROM categoria AS c, repuesto AS r, foto AS f WHERE c.id_categoria = r.id_categoria AND r.id_repuesto = '.$id.' AND r.id_repuesto = f.id_repuesto';
+        
+        $query = $db->Execute($sql1);
+        $row = $query->FetchRow();
+	    
+    ?>
+<section class="gradiente">
+    <div class="text-center pt-4 mb-4">
+        <h2 class="titulo">Detalle de <?=$row[0]?></h2>
     </div>
-    <div class="container mt-4 mb-4">
+    <div class="container mt-4 pb-5">
         <div class="row">
             <div class="col-md-6">
-                  <img src="images/electrodomesticos.jpg" class="card-img-top img-fluid" alt="...">
+                  <img src="admin/modulo/repuesto/uploads/files/<?=$row[2]?>" class="card-img-top img-fluid" alt="...">
             </div>
             <div class="col-md-6">
                 <div class="text-center">
-                    <h2 class="subtitulo">Detalles</h2>
+                    <h2 class="subtitulo">Detalle</h2>
                 </div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	            
+                <p><?=$row[1]?></p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12" align="right">
+                <p><a class="btn btn-warning" href="javascript: history.go(-1)">Volver atrás</a></p>
             </div>
         </div>
     </div>
 </section>
 <div class="brands-area">
     <div class="text-center">
-        <h2 class="subtitulo">Productos relacionados</h2>
+        <h2 class="subtitulo">Productos Relacionados</h2>
     </div>
         <div class="zigzag-bottom"></div>
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <div class="brand-wrapper">
-                        <div class="brand-list">
-                            <img src="marcas/brand01.png" alt="">
-                            <img src="marcas/brand02.png" alt="">
-                            <img src="marcas/brand03.png" alt="">
+                    <!--Carousel Wrapper-->
+                    <div id="multi-item-example" class="carousel slide carousel-multi-item" data-ride="carousel">
+
+                        <!--Controls-->
+                        <div class="controls-top">
+                            <a class="btn-floating" href="#multi-item-example" data-slide="prev"><i class="fas fa-chevron-left"></i></a>
+                            <a class="btn-floating" href="#multi-item-example" data-slide="next"><i
+                                        class="fas fa-chevron-right"></i></a>
                         </div>
+                        <!--/.Controls-->
+
+                        <!--Indicators-->
+                        <ol class="carousel-indicators">
+                            <li data-target="#multi-item-example" data-slide-to="0" class="active"></li>
+                            <li data-target="#multi-item-example" data-slide-to="1"></li>
+                            <li data-target="#multi-item-example" data-slide-to="2"></li>
+                        </ol>
+                        <!--/.Indicators-->
+
+                        <!--Slides-->
+                        <div class="carousel-inner" role="listbox">
+                            <!--First slide-->
+                            <div class="carousel-item active">
+                                <?php
+	                                $sql = 'SELECT r.id_repuesto, f.name, r.name, r.detail FROM repuesto AS r, foto AS f WHERE r.id_repuesto = f.id_repuesto AND r.id_categoria = '.$row[3].' ORDER BY (r.id_repuesto) ASC';
+	                                $query1 = $db->Execute($sql);
+	                                $num = $query1->RecordCount();
+	                                
+	                                if ($num < 3) $num = 1;
+	                                else $x = ($num % 3);
+	                                $y = intdiv($num,3);
+	                                $filas = $x+$y;
+	                                $c = 1;
+	                                while ($reg = $query1->FetchRow()){
+		                               
+                                ?>
+
+                                <div class="col-md-4">
+                                    <div class="card mb-2">
+                                        <img class="card-img-top"
+                                             src="admin/modulo/repuesto/uploads/files/<?=$reg[1]?>"
+                                             alt="Card image cap">
+                                        <div class="card-body">
+                                            <h4 class="card-title"><?=$reg[2]?></h4>
+                                            <p class="card-text"><?=$reg[3]?></p>
+                                            <a class="btn btn-primary" href="detalle_del_producto?idPro=<?=$reg[0];?>">Detalle</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <?php
+		                                if($c == 3) break;
+                                        $c++;
+	                                }
+	                                $num = $num - 3;
+	                                $filas--;
+                                ?>
+                            </div>
+                            <!--/.First slide-->
+
+                            <!--Second slide-->
+                            <?php
+                                while ( $filas > 0 ){
+                            ?>
+                            <div class="carousel-item">
+	
+	                            <?php
+                                    $c=1;
+		                            while ( $reg = $query1->FetchRow() ){
+	                            ?>
+
+                                <div class="col-md-4">
+                                    <div class="card mb-2">
+                                        <img class="card-img-top"
+                                             src="admin/modulo/repuesto/uploads/files/<?=$reg[1]?>"
+                                             alt="Card image cap">
+                                        <div class="card-body">
+                                            <h4 class="card-title"><?=$reg[2]?></h4>
+                                            <p class="card-text"><?=$reg[3]?></p>
+                                            <a class="btn btn-primary" href="detalle_del_producto?idPro=<?=$reg[0];?>">Detalle</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                
+                                <?php
+                                        if($c == 3) break;
+                                        
+                                        $c++;
+			                            $num--;
+		                            }
+	                            ?>
+                            </div>
+                            <?php
+                                    $filas--;
+                                }
+                            ?>
+                            <!--/.Second slide-->
+
+                        </div>
+                        <!--/.Slides-->
+
                     </div>
+                    <!--/.Carousel Wrapper-->
                 </div>
             </div>
         </div>
-    </div> <!-- End brands area -->    
+    </div> <!-- End brands area -->
+    
     <div class="mt-5 pt-5 pb-3 footer">
             <div class="container">
                 <div class="row">
@@ -203,6 +324,78 @@
     <script src="js/jquery.nivo.slider.pack.js" type="text/javascript"></script>
     <script src="js/nivo.slider.active.js" type="text/javascript"></script>
     <script src="js/owl.carousel.min.js" type="text/javascript"></script>
-                         
+    <script>
+        $('.carousel.carousel-multi-item.v-2 .carousel-item').each(function(){
+            var next = $(this).next();
+            if (!next.length) {
+                next = $(this).siblings(':first');
+            }
+            next.children(':first-child').clone().appendTo($(this));
+
+            for (var i=0;i<3;i++) {
+                next=next.next();
+                if (!next.length) {
+                    next=$(this).siblings(':first');
+                }
+                next.children(':first-child').clone().appendTo($(this));
+            }
+        });
+    </script>
+    <style>
+        // Carousels
+        .carousel {
+        .carousel-control-prev-icon,
+        .carousel-control-next-icon {
+            width: $carousel-control-icon-width;
+            height: $carousel-control-icon-height;
+        }
+        .carousel-control-prev-icon {
+            background-image: $carousel-control-prev-icon;
+        }
+        .carousel-control-next-icon {
+            background-image: $carousel-control-next-icon;
+        }
+        .carousel-indicators {
+        li {
+            width: $carousel-indicators-width;
+            height: $carousel-indicators-height;
+            cursor: pointer;
+            border-radius: $carousel-indicators-border-radius;
+        }
+        }
+        }
+        .carousel-fade {
+        .carousel-item {
+            opacity: 0;
+            transition-duration: $carousel-transition-duration;
+            transition-property: opacity;
+        }
+        .carousel-item.active,
+        .carousel-item-next.carousel-item-left,
+        .carousel-item-prev.carousel-item-right {
+            opacity: 1;
+        }
+        .carousel-item-left,
+        .carousel-item-right {
+        &.active {
+             opacity: 0;
+         }
+        }
+        .carousel-item-next,
+        .carousel-item-prev,
+        .carousel-item.active,
+        .carousel-item-left.active,
+        .carousel-item-prev.active {
+            transform: $carousel-item-transform;
+        @supports (transform-style: preserve-3d) {
+            transform: $carousel-item-transform-2;
+        }
+        }
+        }
+        .col-md-4 {
+            
+            float: left;
+        }
+    </style>
   </body>
 </html>

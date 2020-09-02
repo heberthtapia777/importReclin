@@ -1,5 +1,13 @@
 <!doctype html>
 <?php
+	include 'admin/adodb5/adodb.inc.php';
+	include 'admin/inc/function.php';
+	
+	$db = NewADOConnection('mysqli');
+	//$db->debug = true;
+	$db->Connect();
+	
+	$op = new cnFunction();
   # Iniciando la variable de control que permitirá mostrar o no el modal
   $exibirModal = false;
   # Verificando si existe o no la cookie
@@ -7,7 +15,7 @@
   {
     # Caso no exista la cookie entra aqui
     # Creamos la cookie con la duración que queramos
-     
+    
     $expirar = 3600; // muestra cada 1 hora
     //$expirar = 10800; // muestra cada 3 horas
     //$expirar = 21600; //muestra cada 6 horas
@@ -25,15 +33,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="fontawesome/css/fontawesome.css">
-    <link rel="stylesheet" href="fontawesome/css/all.css">
-    <link rel="stylesheet" type="text/css" href="css/estilos.css">
-    <link href="css/nivo-slider.css" rel="stylesheet">
-    <link href="css/animate.min.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet" type="text/css">
-    <script src="js/cargareloj.js"></script>
-    <link rel="stylesheet" href="css/owl.carousel.css">
+      <link rel="stylesheet" href="css/bootstrap.min.css">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+      <link rel="stylesheet" href="fontawesome/css/fontawesome.css">
+      <link rel="stylesheet" href="fontawesome/css/all.css">
+      <link rel="stylesheet" type="text/css" href="css/estilos.css?v=<?php echo time(); ?>">
+      <link href="css/nivo-slider.css" rel="stylesheet">
+      <link href="css/animate.min.css" rel="stylesheet">
+      <link href="css/style.css" rel="stylesheet" type="text/css">
+      <script src="js/cargareloj.js"></script>
+      <link rel="stylesheet" href="css/owl.carousel.css">
     <title>Importadora RECLIN</title>
   </head>
   <body onload="actualizaReloj()">
@@ -97,40 +107,44 @@
         </div>
     </div>  <!--End fondo logotipo -->
     <!-- Main area start -->
-    
-<nav class="navbar navbar-expand-lg gris navbar-dark scrolling-navbar">
-  <div class="container">
-    <a class="navbar-brand" href="#"><img src="images/logo_technosoft.png" alt="logo-technosoft" class="img-fuid" width="250" height="auto"></a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link" href="index">Inicio</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link active" href="quienes_somos">Quienes somos</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="nuestros-servicios" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Nuestros productos</a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <a class="dropdown-item" href="nuestros_productos">categoria 1</a>
-            <a class="dropdown-item" href="nuestros_productos">categoria 2</a>
-            <a class="dropdown-item" href="nuestros_productos">categoria 3</a>
-            <a href="nuestros_productos" class="dropdown-item">categoria 4</a>
-            <a href="nuestros_productos" class="dropdown-item">categoria 5</a>
-          </div>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="contactanos">Contactanos</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav>        
-<section>
-    <div class="text-center mt-4 mb-4">
+
+    <nav class="navbar navbar-expand-lg gris navbar-dark scrolling-navbar">
+        <div class="container">
+            <a class="navbar-brand" href="#"><img src="images/logo_technosoft.png" alt="logo-technosoft" class="img-fuid" width="250" height="auto"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="quienes_somos">Quienes somos</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="nuestros-servicios" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Nuestros productos</a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+						    <?php
+							    $q = 'SELECT * FROM categoria';
+							    $exe = $db->Execute($q);
+							    while ($reg = $exe->FetchRow()){
+								    ?>
+                                    <a class="dropdown-item" href="nuestros_productos?idCat=<?=$reg['id_categoria'];?>&name=<?=$reg['name']?>"><?=$reg['name'];?></a>
+								    <?PHP
+							    }
+						    ?>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contactanos">Contactanos</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+<section class="gradiente">
+    <div class="text-center pt-4 pb-4">
         <h2 class="titulo">Quienes Somos</h2>
     </div>
     <div class="container mt-4 mb-4">
@@ -151,12 +165,12 @@
             </div>
         </div>
     </div>
-    <div class="container mt-4 mb-4">
+    <div class="container mt-4 pb-4">
         <div class="row">
             <div class="col-md-4">
                 <div class="card border-primary">
                   <div class="card-header text-center bg-primary">
-                    OBJETIVO
+                    <h5>OBJETIVO</h5>
                   </div>
                   <div class="card-body">
                     <h5 class="card-title">Special title treatment</h5>
@@ -166,8 +180,8 @@
             </div>
             <div class="col-md-4">
                 <div class="card border-primary">
-                  <div class="card-header text-center">
-                    VISION
+                  <div class="card-header text-center bg-primary">
+                    <H5>MISION</H5>
                   </div>
                   <div class="card-body">
                     <h5 class="card-title">Special title treatment</h5>
@@ -177,8 +191,8 @@
             </div>
             <div class="col-md-4">
                 <div class="card border-primary">
-                  <div class="card-header text-center">
-                    MISION
+                  <div class="card-header text-center bg-primary">
+                    <H5>VISION</H5>
                   </div>
                   <div class="card-body">
                     <h5 class="card-title">Special title treatment</h5>
@@ -257,7 +271,7 @@
                     </div>
                 </div>
             </div>
-        </section>  
+        </section>
     <div class="mt-5 pt-5 pb-3 footer">
             <div class="container">
                 <div class="row">
@@ -328,23 +342,23 @@
         </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-    <script src="js/bootstrap.min.js"></script>
     <script src="fontawesome/js/fontawesome.js"></script>
     <script src="fontawesome/js/all.js"></script>
     <!-- Nivo slider js -->
     <script src="js/jquery.nivo.slider.pack.js" type="text/javascript"></script>
     <script src="js/nivo.slider.active.js" type="text/javascript"></script>
     <script src="js/owl.carousel.min.js" type="text/javascript"></script>
-    <?php if($exibirModal === true) : // Si nuestra variable de control "$exibirModal" es igual a TRUE activa nuestro modal y será visible a nuestro usuario. ?>
-        <script>
+     <script>
         $(document).ready(function()
         {
           // id de nuestro modal
           $("#modalInicio").modal("show");
         });
         </script>
-    <?php endif; ?>                   
+    
   </body>
 </html>

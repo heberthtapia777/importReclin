@@ -2,6 +2,9 @@
   include '../../inc/sessionControl.php';
 
   $cargo = $_SESSION['cargo'];
+
+
+
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -313,8 +316,8 @@
       <!--footer start-->
       <footer class="site-footer">
           <div class="text-center">
-              2020 - <a href="http://www.technosoft-bolivia.com" target="_blank">TechnoSoft - Bolivia</a>
-              <a href="http://www.technosoft-bolivia.com" class="go-top" target="_blank">
+              2018 - <a href="http://technosoft-bolivia.net" target="_blank">TechnoSoft - Bolivia</a>
+              <a href="http://technosoft-bolivia.net" class="go-top" target="_blank">
                   <i class="fa fa-angle-up"></i>
               </a>
           </div>

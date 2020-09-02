@@ -64,15 +64,24 @@ table.page_footer {width: 100%; border: none; background-color: white; padding: 
         <tr>
 
             <td style="width:15%; "><strong>Cliente:</strong></td>
-            <td style="width:50%; text-transform: capitalize;"><? echo $cliente; ?> </td>
-			<td style="width:15%;text-align:right"><strong>Teléfono:</strong></td>
-			<td style="width:20%">&nbsp;<? echo $phone; ?> </td>
+            <td style="width:50%; text-transform: capitalize;"><? echo $cliente; ?><strong>&nbsp;&nbsp;&nbsp;&nbsp;CI:</strong> <? echo $ci; ?></td>
+			<td style="width:15%;text-align:right"><strong>Celular:</strong></td>
+			<td style="width:20%">&nbsp;<? echo $celu; ?> </td>
         </tr>
         <tr>
 
+            <td style="width:15%; "><strong>Empresa:</strong></td>
+            <td style="width:50%"><? echo $empresa; ?></td>
+            <td style="width:15%;text-align:right"><strong>Teléfono:</strong></td>
+            <td style="width:20%">&nbsp;<? echo $phone; ?> </td>
+        </tr>
+          <tr>
+
             <td style="width:15%; "><strong>Email:</strong></td>
             <td style="width:50%"><? echo $email; ?></td>
+            
         </tr>
+
 
     </table>
     <br>
@@ -96,7 +105,7 @@ table.page_footer {width: 100%; border: none; background-color: white; padding: 
 <?php
     $sumador_total = 0;
 
-    $sqlQuery   = "SELECT * FROM compra AS c, compraRepuesto AS cr, repuesto AS r WHERE c.id_compra = ".$idX." AND c.id_compra = cr.id_compra AND cr.id_repuesto = r.id_repuesto";
+    $sqlQuery   = "SELECT * FROM compra AS c, comprarepuesto AS cr, repuesto AS r WHERE c.id_compra = ".$idX." AND c.id_compra = cr.id_compra AND cr.id_repuesto = r.id_repuesto";
 
     $sql    = $db->Execute($sqlQuery);
 

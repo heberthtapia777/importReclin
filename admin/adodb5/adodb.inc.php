@@ -540,15 +540,14 @@ if (!defined('_ADODB_LAYER')) {
 		// MODIFICADO
 		$argHostname = "localhost";
 		$argUsername = "root";
-		$argPassword = "d4rkm1nd";//d4rkm1nd
-		$argDatabaseName = "monkydj_tractorepuestoscat";
+		$argPassword = "mysql";//d4rkm1nd    -password
+		$argDatabaseName = "bd_admin";
 
-		/* $argHostname = "ns6219.hostgator.com";
-		$argUsername = "monkydj_tracto";
-		$argPassword = "=QMKF1SGM,Mk";
-		$argDatabaseName = "monkydj_tractorepuestoscat";
-		*/
-
+		/*$argHostname = "localhost";
+		$argUsername = "bd_importReclin";
+		$argPassword = "M;ijiT+]k?wJ";
+		$argDatabaseName = "bd_importReclin";  */
+		
 
 		if ($argHostname != "") $this->host = $argHostname;
 		if ($argUsername != "") $this->user = $argUsername;

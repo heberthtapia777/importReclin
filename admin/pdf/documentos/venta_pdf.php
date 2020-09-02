@@ -29,8 +29,10 @@
 		$sql 	= "SELECT * FROM cliente WHERE id_cliente = '".$clients."'";
 		$query 	= $db->Execute($sql);
 		$reg	= $query->FetchRow();
-
+		$ci	     = $reg['ci'];
 		$cliente = $reg['nombre'].' '.$reg['apP'].' '.$reg['apM'];
+		$celu 	 = $reg['celular'];
+		$empresa = $reg['nombreEmp'];
 		$phone 	 = $reg['phone'];
 		$email	 = $reg['email'];
 	}else{

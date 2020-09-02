@@ -230,62 +230,15 @@
       <!--footer start-->
       <footer class="site-footer">
           <div class="text-center">
-              2020 - <a href="http://www.technosoft-bolivia.com" target="_blank">TechnoSoft - Bolivia</a>
-              <a href="http://www.technosoft-bolivia.com" class="go-top" target="_blank">
+              2018 - <a href="http://technosoft-bolivia.net" target="_blank">TechnoSoft - Bolivia</a>
+              <a href="http://technosoft-bolivia.net" class="go-top" target="_blank">
                   <i class="fa fa-angle-up"></i>
               </a>
           </div>
       </footer>
       <!--footer end-->
   </section>
-<!-- js placed at the end of the document so the pages load faster -->
-    <script type="text/javascript" src="../../assets/js/jquery-1.10.2.js"></script>
-    <script type="text/javascript" src="../../assets/js/bootstrap.js"></script>
-    <script type="text/javascript" src="../../assets/js/jquery.dcjqaccordion.2.7.js"></script>
-    <script type="text/javascript" src="../../assets/js/jquery.scrollTo.min.js"></script>
-    <script type="text/javascript" src="../../assets/js/jquery.nicescroll.js"></script>
-    <!--common script for all pages-->
-    <script src="../../assets/js/common-scripts.js"></script>
-    <!--script for this page-->
-    <script type="text/javascript" src="../../assets/js/jquery.dataTables.js"></script>
-    <script type="text/javascript" src="../../assets/js/dataTables.bootstrap.js"></script>
-    <script type="text/javascript" src="../../assets/js/jquery.json-2.3.js"></script>
-    <script type="text/javascript" src="../../assets/js/jquery.form-validator.js"></script>
 
-    <!--DatePicker-->
-    <script type="text/javascript" src="../../assets/js/es-ES.js"></script>
-    <script type="text/javascript" src="../../assets/js/moment.js"></script>
-    <script type="text/javascript" src="../../assets/js/bootstrap-datetimepicker.js"></script>
-    <script type="text/javascript" src="../../assets/js/es.js"></script>
-    <!--icheck-->
-    <script type="text/javascript" src="../../assets/js/icheck.js"></script>
-
-    <!-- The jQuery UI widget factory, can be omitted if jQuery UI is already included -->
-    <script type="text/javascript" src="../../assets/js/vendor/jquery.ui.widget.js"></script>
-    <!-- The Templates plugin is included to render the upload/download listings -->
-    <script src="//blueimp.github.io/JavaScript-Templates/js/tmpl.min.js"></script>
-    <!-- The Load Image plugin is included for the preview images and image resizing functionality -->
-    <script src="//blueimp.github.io/JavaScript-Load-Image/js/load-image.all.min.js"></script>
-    <!-- The Canvas to Blob plugin is included for image resizing functionality -->
-    <script src="//blueimp.github.io/JavaScript-Canvas-to-Blob/js/canvas-to-blob.min.js"></script>
-    <!-- blueimp Gallery script -->
-    <script src="//blueimp.github.io/Gallery/js/jquery.blueimp-gallery.min.js"></script>
-    <!-- The basic File Upload plugin -->
-    <script type="text/javascript" src="../../assets/js/jquery.fileupload.js"></script>
-    <!-- The File Upload processing plugin -->
-    <script type="text/javascript" src="../../assets/js/jquery.fileupload-process.js"></script>
-    <!-- The File Upload image preview & resize plugin -->
-    <script type="text/javascript" src="../../assets/js/jquery.fileupload-image.js"></script>
-    <!-- The File Upload validation plugin -->
-    <script type="text/javascript" src="../../assets/js/jquery.fileupload-validate.js"></script>
-    <!-- The File Upload user interface plugin -->
-    <script type="text/javascript" src="../../assets/js/jquery.fileupload-ui.js"></script>
-    <!-- The main application script -->
-    <!-- <script type="text/javascript" src="../../assets/js/main.js"></script> -->
-    <!-- lightbox -->
-    <script type="text/javascript" src="../../assets/js/lightbox.js"></script>
-
-    <script type="text/javascript" src="../../assets/js/myJavaScript.js"></script>
  
 
     <script>

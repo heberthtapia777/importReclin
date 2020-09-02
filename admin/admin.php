@@ -248,10 +248,10 @@ session_start();
                   <li class="sub-menu">
                       <a href="javascript:;" >
                           <i class="fa fa-wrench"></i>
-                          <span>Productos</span>
+                          <span>Repuestos</span>
                       </a>
                       <ul class="sub">
-                          <li><a  href="modulo/repuesto/">Lista de productos</a></li>
+                          <li><a  href="modulo/repuesto/">Lista Repuestos</a></li>
                       </ul>
                   </li>
                   <li class="sub-menu">
@@ -317,6 +317,35 @@ session_start();
                             <li id="listProveedor"><a  href="modulo/proveedor/">Lista Proveedores</a></li>
                         </ul>
                     </li>
+                  <!-- <li class="sub-menu">
+                      <a href="javascript:;" >
+                          <i class="fa fa-tasks"></i>
+                          <span>Forms</span>
+                      </a>
+                      <ul class="sub">
+                          <li><a  href="form_component.html">Form Components</a></li>
+                      </ul>
+                  </li>
+                  <li class="sub-menu">
+                      <a href="javascript:;" >
+                          <i class="fa fa-th"></i>
+                          <span>Data Tables</span>
+                      </a>
+                      <ul class="sub">
+                          <li><a  href="basic_table.html">Basic Table</a></li>
+                          <li><a  href="responsive_table.html">Responsive Table</a></li>
+                      </ul>
+                  </li>
+                  <li class="sub-menu">
+                      <a href="javascript:;" >
+                          <i class=" fa fa-bar-chart-o"></i>
+                          <span>Charts</span>
+                      </a>
+                      <ul class="sub">
+                          <li><a  href="morris.html">Morris</a></li>
+                          <li><a  href="chartjs.html">Chartjs</a></li>
+                      </ul>
+                  </li> -->
                   <?php
                   }
                   ?>
@@ -393,7 +422,7 @@ session_start();
             </div><!-- /col-md-4 -->
 
             <?PHP
-               date_default_timezone_set('America/La_Paz');
+               date_default_timezone_set('America/Asuncion');
                 $sql = "select SUM(c.total) As totalVenta, e.nombre,e.apP, s.nameSuc from compra As c, empleado As e , sucursal As s where c.id_empleado=e.id_empleado And s.id_sucursal=e.id_sucursal AND c.dateReg between '".date("Y-m-d")." 00:00:00' And '".date("Y-m-d")." 23:59:59'";
                 //echo("ddddddddd ".$fecha);
                 if($_SESSION['ROL']=='OPERADOR'){
@@ -748,41 +777,14 @@ session_start();
       <!--footer start-->
       <footer class="site-footer">
           <div class="text-center">
-              2019 - <a href="http://www.technosoft-bolivia.com" target="_blank">TechnoSoft-Bolivia</a>
-              <a href="http://www.technosoft-bolivia.com" class="go-top" target="_blank">
+              2018 - <a href="http://technosoft-bolivia.net" target="_blank">TechnoSoft-Bolivia</a>
+              <a href="http://technosoft-bolivia.net" class="go-top" target="_blank">
                   <i class="fa fa-angle-up"></i>
               </a>
           </div>
       </footer>
       <!--footer end-->
   </section>
-<!-- js placed at the end of the document so the pages load faster -->
-    <script src="assets/js/jquery-1.10.2.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="assets/js/jquery.dcjqaccordion.2.7.js"></script>
-    <script src="assets/js/jquery.scrollTo.min.js"></script>
-    <script src="assets/js/jquery.nicescroll.js" type="text/javascript"></script>
-    <script src="assets/js/jquery.sparkline.js"></script>
-
-
-    <!--common script for all pages-->
-    <script src="assets/js/common-scripts.js"></script>
-
-    <script type="text/javascript" src="assets/js/gritter/js/jquery.gritter.js"></script>
-    <script type="text/javascript" src="assets/js/gritter-conf.js"></script>
-
-    <!--script for this page-->
-    <script src="assets/js/sparkline-chart.js"></script>
-    <script src="assets/js/zabuto_calendar.js"></script>
-
-    <!-- JS para CHAT -->
-    <script src="https://js.pusher.com/4.0/pusher.min.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <script type="text/javascript" src="assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
-    <script type="text/javascript" src="assets/js/push.min.js"></script>
-    <script type="text/javascript" src="assets/js/miChat.min.js"></script>
-
-    <script type="text/javascript" src="assets/js/myJavaScript.js"></script>
 
    
 

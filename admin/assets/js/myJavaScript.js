@@ -43,6 +43,7 @@ function outSession(user){
 }
 
 function despliega(p, div, id){
+	alert(idCategoria);
 	$.ajax({
 		url: p,
 		type: 'post',
@@ -301,6 +302,7 @@ function updateForm(idForm, p){
 	});
 }
 
+
 function fDelete(idForm, p){
 	var dato = JSON.stringify( $('#'+idForm).serializeObject() );
 	$.ajax({
@@ -345,7 +347,7 @@ function fDelete(idForm, p){
 			if(data.tabla === 'cliente'){
 				$('#datos_ajax_delete').html('<div class="alert alert-success" role="alert"><strong>Eliminado Correctamente!!!</strong></div><br>').fadeIn(4000,function () {
 					$('#datos_ajax_delete').fadeOut(2000,function () {
-						$('#dataDelete').modal('hide').delay(4000);
+						$('#dataDeleteCli').modal('hide').delay(4000);
 						displaySection('listTabla.php','unseen');
 					});
 				});
@@ -355,6 +357,14 @@ function fDelete(idForm, p){
 					$('#datos_ajax_delete').fadeOut(2000,function () {
 						$('#dataDelete').modal('hide').delay(4000);
 						despliega('modulo/produccion/listTabla.php','listTabla');
+					});
+				});
+			}
+			if(data.tabla === 'proveedor'){
+				$('#datos_ajax_delete').html('<div class="alert alert-success" role="alert"><strong>Eliminado Correctamente!!!</strong></div><br>').fadeIn(4000,function () {
+					$('#datos_ajax_delete').fadeOut(2000,function () {
+						$('#dataDeletePro').modal('hide').delay(4000);
+						displaySection('listTabla.php','unseen');
 					});
 				});
 			}
@@ -1057,10 +1067,12 @@ function busca_articulo(){
             	if(data==0){
             		alert("No existe el articulo...!");
             		$("#codigo").val("");
+            		$("#idrepuesto").val("");
             		$("#codigo").focus();
             		$("#cantidad").attr("disabled", true);
             		$("#preciou").attr("disabled", true);
             	}else{
+            		$("#idrepuesto").val(data[0].id_repuesto);
 		            $(".widget-user-desc").html(data[0].namePro);
 		            $(".exis").html(data[0].cantidad);
 		            $(".preciol").html(data[0].priceSale);
@@ -1080,6 +1092,7 @@ function busca_articulo(){
 			            if(data[0].cantidad <= 0){
 			                alert("No hay suficiente existencia...!")
 			                $("#codigo").val("");
+			                $("#idrepuesto").val("");
 			                $("#codigo").focus();
 			                $("#cantidad").attr("disabled", true);
 			                $("#preciou").attr("disabled", true);
@@ -1141,10 +1154,13 @@ function add_art(art){
 }
 /*************************************************************************************/
  function agrega_a_lista(){
+
    $(document).ready(function(){
         if( $("#cantidad").val() > 0 ){
 
             var articulo 	=	$("#codigo").val();
+          //  alert($("#idrepuesto").val());
+            var idrepuesto  = $("#idrepuesto").val();
             var descripcion =	$(".widget-user-desc").html();
             var precio 		=	$("#preciou").val();
             var cantidad 	=	$("#cantidad").val();
@@ -1182,7 +1198,7 @@ function add_art(art){
 
             if( sw === 0 && articulo !== undefined ){
             	if( parseFloat(cantidad) <= parseFloat(canTotal) ){
-            		$("#tabla_articulos > tbody").append("<tr id='"+articulo+"'><td class='center'>"+articulo+"</td><td class='center'>"+descripcion+"</td><td class='center'>"+cantidad+"</td><td class='center'>"+price[1]+"</td><td class='center'>"+monto.toFixed(2)+"</td><td class='center'><button class='btn btn-block btn-danger btn-xs delete'><i class='icon-trash bigger-120'></i> Eliminar</button></td></tr>");
+            		$("#tabla_articulos > tbody").append("<tr id='"+idrepuesto+"'><td class='center'>"+articulo+"</td><td class='center'>"+descripcion+"</td><td class='center'>"+cantidad+"</td><td class='center'>"+price[1]+"</td><td class='center'>"+monto.toFixed(2)+"</td><td class='center'><button class='btn btn-block btn-danger btn-xs delete'><i class='icon-trash bigger-120'></i> Eliminar</button></td></tr>");
             		$("#codigo").val("");
 		            $("#cantidad").val("");
 		            $("#preciou").val("");
@@ -1226,6 +1242,8 @@ function add_art(art){
             });
         }
     })
+
+    $("#ci").focus();
 }
 /******************************************************************************************/
 $(function(){
@@ -1307,6 +1325,7 @@ function cancela_venta(){
                       $("#tabla_articulos > tbody:last").children().remove();
                       resumen();
                       cancela_codigo();
+                      limpiaVenta();
                       $("#codigo").focus();
                   }
                },
@@ -1319,6 +1338,7 @@ function cancela_venta(){
                 }
               ]
           });
+       
    }
 /***************************************************************************************/
 function cancela_codigo(){
@@ -1358,6 +1378,7 @@ function busca_cliente(){
       }
 /*********************************************************************************************/
 function pone_cliente(elid){
+	//alert(elid);
     var client=elid;
     var idcl=client.split("|");
     $("#idcliente_credito").val(idcl[0]);
@@ -1365,6 +1386,13 @@ function pone_cliente(elid){
     $("#tipo_de_venta").html("<button class='btn btn-danger btn-xs' onclick='quita_cliente();'>Quitar</button> Venta al Contado a: "+idcl[1]);
     $("#btn_cre").attr('disabled', true);
     //window.alert(client);
+
+    $('#ci').val(idcl[2]);
+    $('#nombre').val(idcl[1]);
+    $('#celu').val(idcl[3]);
+    $('#empresa').val(idcl[4]);
+    $('#fono').val(idcl[5]);
+    $('#email').val(idcl[6]);
 }
 /*********************************************************************************************/
 function quita_cliente(){
@@ -1395,12 +1423,34 @@ function calcula_cambio(){
    $("#el_cambio").val("Bs. "+change.toFixed(2));
 }
 /**************************************************************************************/
-function procesaVenta(){
+function procesaVenta(swNuevoCliente){
 	var resp=0;
 	var idCliente 	=	$("#idcliente_credito").val();
 	var subTotal 	=	$('#subTotal').html();
 	var total		=	$('#totales').html();
 	var descuento 	= 	$('#descuento').val();
+	/// variables de cliente
+	if(swNuevoCliente==1){//cuando el clienten no existe, se inserta
+		var idCliente=$("#ci").val();
+		$.ajax({
+	    	url: '../../modulo/venta/insertaClienteNuevo.php',
+	        type: 'POST',
+	        async: false,
+	        data: {
+	        	ci: idCliente,
+	        	nombre: $("#nombre").val(),
+	        	celu: $("#celu").val(),
+	        	empresa: $("#empresa").val(),
+	        	fono: $("#fono").val(),
+	        	email:$("#email").val(),
+
+	        },
+	    });
+	}
+
+
+	//alert("pppppppppppp "+idCliente);
+
 	descuento 	= descuento.split(" ");
 	subTotal	=	subTotal.split(" ");
 	total		=	total.split(" ");
@@ -1423,7 +1473,16 @@ function procesaVenta(){
         	resp = x;
         }
     });
+    limpiaVenta();
  	return(resp);
+}
+function limpiaVenta(){
+	$("#ci").val("");
+	$("#nombre").val("");
+	$("#celu").val("");
+	$("#empresa").val("");
+	$("#fono").val("");
+	$("#email").val("");
 }
 function procesa_venta(){
   $(document).ready(function(){
@@ -1437,14 +1496,20 @@ function procesa_venta(){
         if($('#idcliente_credito').val()!=""){
             credi 	=	'1';
             clients =	$("#idcliente_credito").val();
+            swNuevoCliente=0;
+        }
+        else{
+        	clients=$("#ci").val();
+			swNuevoCliente=1;
         }
         var yapuso = 0;
 
-        var idX = procesaVenta();
+        var idX = procesaVenta(swNuevoCliente);
 
         	$('#tabla_articulos > tbody > tr').each(function(){
                 //var descripcion_art	=	$(this).find('td').eq(1).html();
-                var cod 	= 	$(this).find('td').eq(0).html();
+                //var cod 	= 	$(this).find('td').eq(0).html();
+                var cod 	=   $(this).attr('id');
                 var can 	= 	$(this).find('td').eq(2).html();
                 var preciou	= 	$(this).find('td').eq(3).html();
                 var monto	=	$(this).find('td').eq(4).html();
@@ -1489,6 +1554,161 @@ function verCompra(idX, clients){
     VentanaCentrada('../../pdf/documentos/venta_pdf.php?idX='+idX+'&clients='+clients,'Cotizacion','','1024','768','true');
 }
 
+
+function BuscarRepuesto(){
+	//alert($("#numParteE").val());
+	//alert($("#numParte").val());
+	
+	
+  $(document).ready(function(){
+    var cod = $("#numParte").val().trim();
+        if(cod.trim()!=""){
+	        $(document).ready(function(){
+	        	$.ajax({
+	          	beforeSend: function(){
+	            	$("#data_articulo").html("Buscando informacion del articulo...");
+	         	},
+	          	url: '../../modulo/repuesto/buscaRepuestoAdmin.php',
+	          	dataType: 'json',
+	          	type: 'POST',
+	          	data: 'codigo='+$("#numParte").val(),
+	          	success: function(data){
+	          		//alert($("#numParteE").val());
+	            	if(data==0){//por verdad no existe el repuesto
+	            		//alert(data+"  if")
+	            		//alert("No existe el articulo...!");
+	            		$("#idrepuesto").val("");
+	            		$("#codigo").val("");
+	            		$("#name").val("");
+	            		$("#fromRep").val("");
+	            		$("#priceSale").val("");
+	            		$("#priceBuy").val("");
+	            		$("#swModifica").val("NO");
+			            $("#IDREPUESTOMODIFICA").val("");
+
+			            $("#categoria_").removeAttr('readonly');
+			            $("#proveedor_").removeAttr('readonly');
+			            $("#codigo").removeAttr('readonly');
+	            		$("#name").removeAttr('readonly');
+	            		$("#fromRep").removeAttr('readonly');
+	            		$("#cantidadMin").removeAttr('readonly');
+	            		$("#priceSale").removeAttr('readonly');
+	            		$("#priceBuy").removeAttr('readonly');
+	            		$("#swModifica").removeAttr('readonly');
+			            $("#IDREPUESTOMODIFICA").removeAttr('readonly');
+			            $("#detail").removeAttr('readonly');
+
+			            //$("#categoria_").append("<option value='' disabled selected hidden>dsd</option>");
+			            //$("#proveedor_").append("<option value='' disabled selected hidden>22</option>");
+			            //$("#categoria_ option[value="+0+"]").attr("selected",true);
+						$("#proveedor_ option[value="+ 0 +"]").attr("selected",true);
+
+	            		
+	            		//document.getElementById("detail").innerHTML=("dd");
+	            		
+	            	}else{
+
+	            		$("#categoria_").attr('readonly', 'readonly');
+			            $("#proveedor_").attr('readonly', 'readonly');
+			            $("#codigo").attr('readonly', 'readonly');
+	            		$("#name").attr('readonly', 'readonly');
+	            		$("#fromRep").attr('readonly', 'readonly');
+	            		$("#cantidadMin").attr('readonly', 'readonly');
+	            		$("#priceSale").attr('readonly', 'readonly');
+	            		$("#priceBuy").attr('readonly', 'readonly');
+	            		$("#swModifica").attr('readonly', 'readonly');
+			            $("#IDREPUESTOMODIFICA").attr('readonly', 'readonly');
+			            $("#detail").attr('readonly', 'readonly');
+
+	            		//alert(data[0].id_categoria);
+	            		$("#idrepuesto").val(data[0].id_repuesto);
+			           // $(".widget-user-desc").html(data[0].namePro);
+
+						$("#categoria_ option[value="+ data[0].id_categoria+"]").attr("selected",true);
+						$("#proveedor_ option[value="+ data[0].id_proveedor+"]").attr("selected",true);
+			            $("#name").val(data[0].namePro);
+			            $("#fromRep").val(data[0].fromRep);
+						$("#cantidadMin").val(data[0].stockMin);
+			            $("#priceSale").val(data[0].priceSale);
+	            		$("#priceBuy").val(data[0].priceBuy);
+	            		$("#detail").val(data[0].detail);
+						//document.getElementById("detail").innerHTML=(data[0].detail);
+			            //$('#cantidad').number(true, 2);
+			            //$("#cantidad").attr("disabled", false);
+			            //$("#cantidad").val(0.00);
+			            //$("#preciou").select();
+			            $("#cantidad").focus();
+			            $("#swModifica").val("SI");
+			            $("#IDREPUESTOMODIFICA").val(data[0].id_repuesto);
+
+
+				           
+	                }
+	           },
+	           error: function(jqXHR,estado,error){
+	            alert("Parece ser que hay un error por favor, reportalo a Soporte inmediatamente...!");
+	           }
+	           });
+	        });
+        
+    	}
+    	else{
+         
+        }
+    });
+        
+}
+
+function RepuestoSinStock(){
+	//alert("posi");
+	$('#DIV-ULTIMOS-REPUESTOS').hide(1000);
+    $('#DIV-SIN-STOCK').toggle(1000, function() {
+            
+    });
+}
+
+function UltimosRepuestos(){
+
+	//alert("posi");
+    //$(selector).hide(duracion,callback);
+    
+    $('#DIV-SIN-STOCK').hide(1000);
+    $('#DIV-ULTIMOS-REPUESTOS').toggle(1000, function() {
+            
+    });
+}
+
+function VerificaVenta(idRepuesto){
+
+	//alert(idRepuesto);
+
+	$.ajax({
+		url: "../../modulo/repuesto/buscaRepuestoVenta.php",
+		type: 'post',
+		dataType: 'json',
+		data:{IDREPUESTO:idRepuesto},
+		beforeSend: function(data){
+			//alert(data+" 1");
+			//$("#"+div).html('<div id="load" align="center"><p>Cargando contenido. Por favor, espere ...</p></div>');
+		},
+		success: function(data){
+			//alert(data+" 2" );
+			if(data==1){
+				alert("El repuesto seleccionado no se puede eliminar por que tiene ventas realizadas");
+				$('#dataDelete').modal('hide').delay(1000);
+			}
+		},
+		error: function(data){
+			//alert(data+" 3");
+			alert("error al verificar.. contactar con sistemas");
+		}
+			
+	});
+   
+
+}
+
+
 function busca_cotizacion(){
 	var dato = $('#cotizacion').val();
 	$.ajax({
@@ -1506,8 +1726,14 @@ function busca_cotizacion(){
 			//alert(data.cant);
 			for (var i = 0; i < data.length; i++) {
 				var monto 	=	data[i].cantidad*data[i].priceSale;
-				$("#tabla_articulos > tbody").append("<tr id='"+data[i].numparte+"'><td class='center'>"+data[i].numparte+"</td><td class='center'>"+data[i].name+"</td><td class='center'>"+data[i].cantidad+"</td><td class='center'>"+data[i].priceSale+"</td><td class='center'>"+monto.toFixed(2)+"</td><td class='center'><button class='btn btn-block btn-danger btn-xs delete'><i class='icon-trash bigger-120'></i> Eliminar</button></td></tr>");
+				$("#tabla_articulos > tbody").append("<tr id='"+data[i].id_repuesto+"'><td class='center'>"+data[i].numparte+"</td><td class='center'>"+data[i].name+"</td><td class='center'>"+data[i].cantidad+"</td><td class='center'>"+data[i].priceSale+"</td><td class='center'>"+monto.toFixed(2)+"</td><td class='center'><button class='btn btn-block btn-danger btn-xs delete'><i class='icon-trash bigger-120'></i> Eliminar</button></td></tr>");
 			}
+			$("#ci").val(data[0].ci);
+			$("#nombre").val(data[0].atencion);
+			$("#celu").val(data[0].tel1);
+			$("#empresa").val(data[0].empresa);
+			$("#fono").val(data[0].tel2);
+			$("#email").val(data[0].email);
 			resumen();
 		},
 		error: function(data){
