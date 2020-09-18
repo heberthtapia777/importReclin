@@ -1,31 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d7801cd7-efc4-48ca-b976-b809a40530e1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/admin.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/adodb5/adodb.inc.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/adodb5/adodb.inc.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/assets/js/myJavaScript.js" beforeDir="false" afterPath="$PROJECT_DIR$/admin/assets/js/myJavaScript.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/bd_admin.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/modulo/categoria/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/modulo/categoria/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/modulo/cliente/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/modulo/cliente/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/modulo/empleado/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/modulo/empleado/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/modulo/proveedor/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/modulo/proveedor/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/modulo/reportes/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/modulo/reportes/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/modulo/repuesto/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/modulo/repuesto/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/modulo/repuesto/uploads/files/MOTOR V8 (1).jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/modulo/sucursal/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/modulo/sucursal/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/modulo/sucursal/inventarioSucursal.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/modulo/sucursal/inventarioSucursal.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/modulo/venta/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/modulo/venta/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/pdf/documentos/res/venta_html.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/pdf/documentos/res/venta_html.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/pdf/documentos/venta_pdf.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/pdf/documentos/venta_pdf.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/contactanos.php" beforeDir="false" afterPath="$PROJECT_DIR$/contactanos.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/estilos.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/estilos.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/detalle_del_producto.php" beforeDir="false" afterPath="$PROJECT_DIR$/detalle_del_producto.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nuestros_productos.php" beforeDir="false" afterPath="$PROJECT_DIR$/nuestros_productos.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/quienes_somos.php" beforeDir="false" afterPath="$PROJECT_DIR$/quienes_somos.php" afterDir="false" />
-    </list>
+    <list default="true" id="d7801cd7-efc4-48ca-b976-b809a40530e1" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,9 +90,18 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/admin/admin.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="4784">
+              <caret line="790" selection-start-line="790" selection-end-line="790" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/admin/adodb5/adodb.inc.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="181">
+            <state relative-caret-position="8592">
               <caret line="547" column="36" selection-start-line="547" selection-start-column="24" selection-end-line="547" selection-end-column="36" />
             </state>
           </provider>
@@ -125,8 +110,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/contactanos.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="448">
-              <caret line="142" column="6" selection-start-line="142" selection-start-column="6" selection-end-line="142" selection-end-column="6" />
+            <state relative-caret-position="65">
+              <caret line="158" column="70" selection-start-line="158" selection-start-column="70" selection-end-line="158" selection-end-column="70" />
             </state>
           </provider>
         </entry>
@@ -134,8 +119,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/detalle_del_producto.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="160">
-              <caret line="97" column="30" lean-forward="true" selection-end-line="97" selection-end-column="6" />
+            <state relative-caret-position="1552">
+              <caret line="97" column="6" selection-end-line="17" />
             </state>
           </provider>
         </entry>
@@ -148,17 +133,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3351">
-              <caret line="368" column="78" lean-forward="true" selection-start-line="358" selection-start-column="4" selection-end-line="368" selection-end-column="73" />
+            <state relative-caret-position="-1891">
+              <caret line="262" column="80" lean-forward="true" selection-start-line="262" selection-start-column="80" selection-end-line="262" selection-end-column="80" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/nuestros_productos.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="416">
-              <caret line="146" column="91" lean-forward="true" selection-start-line="146" selection-start-column="91" selection-end-line="146" selection-end-column="91" />
+            <state relative-caret-position="2336">
+              <caret line="146" column="10" selection-start-line="146" selection-start-column="10" selection-end-line="146" selection-end-column="10" />
             </state>
           </provider>
         </entry>
@@ -166,8 +151,39 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/quienes_somos.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
+            <state relative-caret-position="1952">
               <caret line="122" column="49" selection-start-line="122" selection-start-column="49" selection-end-line="122" selection-end-column="49" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/sendCorreo.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="284">
+              <caret line="302" column="57" lean-forward="true" selection-start-line="302" selection-start-column="57" selection-end-line="302" selection-end-column="57" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sendEmail.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="224">
+              <caret line="14" column="12" selection-start-line="14" selection-start-column="12" selection-end-line="14" selection-end-column="12" />
+              <folding>
+                <element signature="e#7#92#0#PHP" expanded="true" />
+                <element signature="n#style#0;n#td#0;n#tr#0;n#table#0;n#td#0;n#tr#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="e#4826#4831#0" expanded="true" />
+                <element signature="n#style#0;n#td#0;n#tr#1;n#table#0;n#td#0;n#tr#3;n#table#0;n#td#0;n#tr#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#td#0;n#tr#0;n#table#0;n#td#0;n#tr#1;n#table#0;n#td#0;n#tr#3;n#table#0;n#td#0;n#tr#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#td#1;n#tr#0;n#table#0;n#td#0;n#tr#1;n#table#0;n#td#0;n#tr#3;n#table#0;n#td#0;n#tr#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#td#0;n#tr#0;n#table#0;n#td#0;n#tr#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="e#4784#4789#0" expanded="true" />
+                <element signature="n#style#0;n#td#0;n#tr#1;n#table#0;n#td#0;n#tr#3;n#table#0;n#td#0;n#tr#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#td#0;n#tr#0;n#table#0;n#td#0;n#tr#1;n#table#0;n#td#0;n#tr#3;n#table#0;n#td#0;n#tr#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#td#1;n#tr#0;n#table#0;n#td#0;n#tr#1;n#table#0;n#td#0;n#tr#3;n#table#0;n#td#0;n#tr#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -220,9 +236,9 @@
   <component name="PhpServers">
     <servers />
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-73" />
+    <option name="y" value="16" />
     <option name="width" value="1616" />
     <option name="height" value="876" />
   </component>
@@ -241,7 +257,12 @@
             <path>
               <item name="importReclin" type="b2602c69:ProjectViewProjectNode" />
               <item name="importReclin" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="importReclin" type="b2602c69:ProjectViewProjectNode" />
+              <item name="importReclin" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -295,15 +316,15 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="50956000" />
+    <option name="totallyTimeSpent" value="51148000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1616" height="886" extended-state="7" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1616" height="886" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17544988" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14203085" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info active="true" anchor="bottom" id="Messages" visible="true" weight="0.32971507" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -329,6 +350,10 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Actualizacion de los formularios de correo" />
+    <option name="LAST_COMMIT_MESSAGE" value="Actualizacion de los formularios de correo" />
+  </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/admin/adodb5_/adodb.inc.php" />
     <entry file="file://$PROJECT_DIR$/admin/ADOdb/adodb.inc.php" />
@@ -342,8 +367,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/admin/admin.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="10" column="25" selection-start-line="3" selection-start-column="2" selection-end-line="10" selection-end-column="25" />
+        <state relative-caret-position="4784">
+          <caret line="790" selection-start-line="790" selection-end-line="790" />
         </state>
       </provider>
     </entry>
@@ -403,7 +428,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/admin/adodb5/adodb.inc.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="181">
+        <state relative-caret-position="8592">
           <caret line="547" column="36" selection-start-line="547" selection-start-column="24" selection-end-line="547" selection-end-column="36" />
         </state>
       </provider>
@@ -412,9 +437,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-319">
           <caret line="10" column="75" lean-forward="true" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="67" />
-          <folding>
-            <element signature="e#7#92#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -429,44 +451,41 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="160">
           <caret line="10" column="52" selection-start-line="10" selection-start-column="47" selection-end-line="10" selection-end-column="52" />
-          <folding>
-            <element signature="e#7#92#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/detalle_del_producto.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="97" column="30" lean-forward="true" selection-end-line="97" selection-end-column="6" />
+        <state relative-caret-position="1552">
+          <caret line="97" column="6" selection-end-line="17" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/quienes_somos.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
+        <state relative-caret-position="1952">
           <caret line="122" column="49" selection-start-line="122" selection-start-column="49" selection-end-line="122" selection-end-column="49" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3351">
-          <caret line="368" column="78" lean-forward="true" selection-start-line="358" selection-start-column="4" selection-end-line="368" selection-end-column="73" />
+        <state relative-caret-position="-1891">
+          <caret line="262" column="80" lean-forward="true" selection-start-line="262" selection-start-column="80" selection-end-line="262" selection-end-column="80" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/contactanos.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="448">
-          <caret line="142" column="6" selection-start-line="142" selection-start-column="6" selection-end-line="142" selection-end-column="6" />
+        <state relative-caret-position="65">
+          <caret line="158" column="70" selection-start-line="158" selection-start-column="70" selection-end-line="158" selection-end-column="70" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/nuestros_productos.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="416">
-          <caret line="146" column="91" lean-forward="true" selection-start-line="146" selection-start-column="91" selection-end-line="146" selection-end-column="91" />
+        <state relative-caret-position="2336">
+          <caret line="146" column="10" selection-start-line="146" selection-start-column="10" selection-end-line="146" selection-end-column="10" />
         </state>
       </provider>
     </entry>
