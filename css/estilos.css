@@ -32,7 +32,8 @@
     margin-right: 5px;
 }
 .fondo {
-    background-image: url(../images/tierra.jpg);
+    /*background: rgba(21, 47, 79, 0.940) !important;*/
+    background: #FFFFFF;
 }
 .gris {
     /*background: rgba(52, 85, 127, 0.749);*/
@@ -60,7 +61,13 @@
     padding-left: 10px;
     padding-right: 10px;
 }
-
+.activo {
+    background: rgba(21, 47, 79, 0.940);
+    color: #fff;
+    border-radius: 6px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
 .jumbotron {
     padding-top: 15px;
     padding-bottom: 25px;
@@ -110,6 +117,51 @@
     text-align: center;
     margin-bottom: 15px;
     text-shadow: 0 2px 2px rgba(0, 0, 0);
+}
+.card {
+    border-radius: 10px;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    margin: 20px;
+    text-align: center;
+    transition: all 0.25s;
+}
+.card:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
+}
+.card img {
+    width: 250px;
+    height: 170px;
+}
+.card-header h5 {
+    color: #fff;
+}
+.card-header {
+    background: #2E527F !important;
+    color: #fff;
+}
+.modal-header {
+    background: #2E527F !important;
+    color: #fff;
+}
+.modal-header h3, h4 {
+    font-weight: 400;
+    color: white;
+    text-shadow: 0 2px 2px rgba(0, 0, 0);
+}
+#whatsapp a {
+    background: none;
+    position: fixed;
+    top: 90%;
+    right: 2%;
+    width: 50px;
+    height: 50px;
+}
+#whatsapp a img {
+    width: 71px;
+    height: auto;
+    z-index: 9999;
 }
 .wrapper {
     padding: 40px;
@@ -198,6 +250,8 @@
     font-style: italic;
 }
 .gradiente {
+    margin-top: -20px;
+    margin-bottom: -20px;
     background: rgba(255, 255, 255, 1);
     background: -moz-radial-gradient(center, ellipse cover, rgba(255, 255, 255, 1) 0%, rgba(251, 253, 254, 1) 41%, rgba(183, 220, 230, 1) 100%);
     background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(255, 255, 255, 1)), color-stop(41%, rgba(251, 253, 254, 1)), color-stop(100%, rgba(183, 220, 230, 1)));
@@ -239,6 +293,11 @@
 }
 .footer .copyright p {
     border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+.footer h4{
+    font-weight: 300;
+    color: white;
+    text-shadow: 0 2px 2px rgba(0, 0, 0);
 }
 /*#lista li {
     position: relative;

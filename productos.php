@@ -8,6 +8,7 @@
 	
 
 	# conectare la base de datos
+	//$con=@mysqli_connect('localhost', 'bd_importReclin', 'M;ijiT+]k?wJ', 'bd_importReclin');
     $con=@mysqli_connect('localhost', 'root', 'mysql', 'bd_admin');
     if(!$con){
         die("imposible conectarse: ".mysqli_error($con));

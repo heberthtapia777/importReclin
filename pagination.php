@@ -1,6 +1,5 @@
 <?php
 	
-	
 	function paginate($reload, $page, $tpages, $adjacents) {
 		$prevlabel = "&lsaquo; Anterior";
 		$nextlabel = "Siguiente &rsaquo;";

@@ -12,7 +12,7 @@ $data = json_decode($data);
 
 //print_r($data);
 
-echo "----->".$destinatario = "$data->email";
+$destinatario = "$data->email";
 
 $asunto = $data->motivo;//"Mensaje es de prueba";
 
@@ -122,11 +122,6 @@ $cuerpo = '
             <tr>
               <td class="bodycopy">
                 '.$data->motivo.'
-              </td>
-            </tr>
-            <tr>
-              <td class="h2">
-                Empresa:
               </td>
             </tr>
             <tr>
@@ -306,11 +301,6 @@ $cuerpo1 = '
             </tr>
             <tr>
               <td class="h2">
-                Empresa:
-              </td>
-            </tr>
-            <tr>
-              <td class="h2">
                 Correo Electronico:
               </td>
             </tr>
@@ -378,16 +368,17 @@ $headers = "MIME-Version: 1.0\r\n";
 $headers .= "Content-type: text/html; charset=iso-8859-1\r\n";
 
 //dirección del remitente
-$headers .= "From: $data->nombre <$data->correo>\r\n";
+$headers .= "From: $data->nombre <$data->email>\r\n";
 
 //dirección de respuesta, si queremos que sea distinta que la del remitente
 //$headers .= "Reply-To: mariano@desarrolloweb.com\r\n";
 
 //ruta del mensaje desde origen a destino
-$headers .= "Return-path: ventas@reclin.org\r\n";
+//$headers .= "Return-path: h.tapia@technosoft-bolivia.com\r\n";
 
 //direcciones que recibián copia
-//$headers .= "Cc: ht.heberth@gmail.com, n4ch0.lopez@gmail.com\r\n";
+//$headers .= "Cc: h.tapia@technosoft-bolivia.com, n4ch0.lopez@gmail.com\r\n";
+//$headers .= "Cc: ventas@reclin.org\r\n";
 
 //direcciones que recibirán copia oculta
 ///$headers .= "Bcc: pepe@pepe.com,juan@juan.com\r\n";
@@ -396,7 +387,7 @@ $mail = mail($destinatario,$asunto,$cuerpo,$headers);
 
 $mail1 = mail($destinatario1,$asunto1,$cuerpo1,$headers);
 
-if($mail)
+if($mail1)
 	echo 1;
 else
 	echo 0;

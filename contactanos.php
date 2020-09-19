@@ -147,104 +147,51 @@
     		<div class="col-md-6">
     			<img src="images/electrodomesticos.jpg" class="img-fluid">
     		</div>
-    		<div class="col-md-6">
-    			<div class="wrapper mb-4">
-    				<h2 class="subtitulo mb-3">Escribenos</h2>
-    				<form action="" method="" accept-charset="utf-8" class="mb-5">
-    					<div class="input-field">
-    						<input type="text" name="" required="">
-    						<label>Nombre</label>
-    					</div>
-    					<div class="input-field">
-    						<input type="email" name="" value="" placeholder="" required="">
-    						<label>Correo</label>
-    					</div>
-    					<div class="input-field">
-    						<input type="phone" name="" required="">
-    						<label>Telefono</label>
-    					</div>
-    					<div class="input-field">
-    						<textarea name="" rows="5" required=""></textarea>
-    						<label>Mensaje</label>
-    					</div>
-    					<input type="submit" name="" value="Enviar mensaje" class="btn-enviar">
-    				</form>
-    			</div>
-    		</div>
-    	</div>
-    </div>
-</section>
-<section class="map">
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3825.2686560786674!2d-68.15622238513565!3d-16.51252918860841!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTbCsDMwJzQ1LjEiUyA2OMKwMDknMTQuNSJX!5e0!3m2!1ses!2sbo!4v1597898204479!5m2!1ses!2sbo" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-</section>
-<div class="pt-5 pb-3 footer">
-            <div class="container">
+            <div class="col-md-6">
                 <div class="row">
-                    <div class="col-lg-5 col-xs-12">
-                        <h4 class="mt-lg-0 mt-sm-3 display-8 font-weight-bold">
-                            Accesorios RECLIN
-                        </h4>
-                        <div class="csssmenu">
-                             <ul id="lista">
-                                  <li><div class="fb-share-button" data-href="http://www.hilubas.com" data-layout="button_count" data-size="small" data-mobile-iframe="true"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fwww.hilubas.com%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore"></li>
-                                  <li><div class="fb-like" data-href="http://www.hilubas.com" data-layout="button_count" data-action="like" data-size="small" data-show-faces="false" data-share="false"></div></li>
-                                  <li><a href="https://www.facebook.com/hilubasbol.rojem" target="blank"><img src="images/face3.jpg" class="img-rounded"></a></li>
-                             </ul>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-xs-12 links">
-                        <h4 class="mt-lg-0 mt-sm-3 display-8 font-weight-bold">
-                            Nuestros enlaces
-                        </h4>
-                        <ul class="m-0 p-0">
-                            <li>
-                                <i class="far fa-home mr-3"></i>
-                                <a href="index">Inicio</a>
-                            </li>
-                            <li>
-                                <i class="far fa-user mr-3"></i>
-                                <a href="quienes_somos">Quienes somos</a>
-                            </li>
-                            <li>
-                                <i class="far fa-cogs mr-3"></i>
-                                <a href="#">Nuestros productos</a>
-                            </li>
-                            <li>
-                                <i class="far fa-envelope mr-3"></i>
-                                <a href="contactanos">Contactanos</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col-lg-4 col-xs-12 location">
-                        <h4 class="mt-lg-0 mt-sm-4 display-8 font-weight-bold">
-                            Nuestra ubicacion
-                        </h4>
-                        <p>
-                            <i class="far fa-street-view mr-3"></i>
-                            22, Lorem ipsum dolor, consectetur adipiscing
-                        </p>
-                        <p class="mb-0">
-                            <i class="far fa-phone mr-3">
-                            </i>
-                            (541) 754-3010
-                        </p>
-                        <p>
-                            <i class="far fa-envelope mr-3"></i>
-                            info@technosoft-bolivia.com
-                        </p>
+                    <div class="col-md-12">
+                        <div id="datos_ajax"></div>
                     </div>
                 </div>
-                <div class="row mt-3">
-                    <div class="col copyright">
-                        <p class="text-center">
-                            <small class="text-white-50">
-                                © 2020. Todos los Derechos Reservados.
-                            </small>
-                        </p>
-                    </div>
+                <div class="wrapper mb-4">
+                    <h2 class="subtitulo mb-3">Escribenos</h2>
+                    <form id="formCont" name="formCont"  accept-charset="utf-8" class="mb-5">
+                        <div class="input-field">
+                            <input type="text" name="nombre" id="nombre" data-validation="required">
+                            <label>Nombre</label>
+                        </div>
+                        <div class="input-field">
+                            <input type="email" name="email" id="email" value="" placeholder="" data-validation="email" data-validation-optional="true">
+                            <label>Correo</label>
+                        </div>
+                        <div class="input-field">
+                            <input type="phone" name="telefono" id="telefono" data-validation="required">
+                            <label>Telefono</label>
+                        </div>
+                        <div class="input-field">
+                            <input type="text" name="asunto" id="asunto" data-validation="required">
+                            <label>Asunto</label>
+                        </div>
+                        <div class="input-field">
+                            <textarea name="mensaje" id="mensaje" rows="5" data-validation="required"></textarea>
+                            <label>Mensaje</label>
+                        </div>
+                        <input type="submit" value="Enviar mensaje" class="btn-enviar">
+                    </form>
                 </div>
             </div>
         </div>
+    </div>
+</section>
+<section class="map">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3825.2686560786674!2d-68.15622238513565!3d-16.51252918860841!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTbCsDMwJzQ1LjEiUyA2OMKwMDknMTQuNSJX!5e0!3m2!1ses!2sbo!4v1597898204479!5m2!1ses!2sbo" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+</section>
+<section id="whatsapp">
+    <a href="https://api.whatsapp.com/send?phone=59178789470" title="contactame" target="blank"><img src="images/whatsapp.png" alt="whatsapp"></a>
+</section>
+<div class="pt-5 pb-3 footer">
+	<?PHP require('footer.php'); ?>
+</div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
@@ -257,12 +204,49 @@
     <script src="js/jquery.nivo.slider.pack.js" type="text/javascript"></script>
     <script src="js/nivo.slider.active.js" type="text/javascript"></script>
     <script src="js/owl.carousel.min.js" type="text/javascript"></script>
+<script src="js/jquery.json-2.3.js" type="text/javascript"></script>
+<script src="js/jquery.form-validator.js" type="text/javascript"></script>
         <script>
         $(document).ready(function()
         {
           // id de nuestro modal
           $("#modalInicio").modal("show");
+
+            $.validate({
+                form: '#formCont',
+                lang: 'es',
+                modules : 'security, modules/logic',
+                onSuccess: function(data) {
+                    $("form#formCont").submit(sendEmail('sendCorreo.php'));// Evento submit de jquery que llamamos al metodo SaveOrUpdate para poder registrar o modificar datos
+                    return false;
+                },
+                onError : function($form) {
+                    //alert('error');
+                }
+            });
         });
+
+        function sendEmail(p){
+            var dato = JSON.stringify( $('#formCont').serializeObject() );
+            $.ajax({
+                url: p,
+                type: 'post',
+                dataType: 'json',
+                async:true,
+                data:{res:dato},
+                beforeSend: function(data){
+                    // $("#"+div).html('<div id="load" align="center" class="alert alert-success" role="alert"><p>Cargando contenido. Por favor, espere ...</p></div>');
+                },
+                success: function(data){
+                    $('#datos_ajax').html('<div class="alert alert-success" role="alert"><strong>Su mensaje, fue enviado correctamente.</strong></div><br>').fadeIn(4000,function (){
+                        $('#datos_ajax').fadeOut(2000,function () {
+                            $('#myModal').modal('hide').delay(7000);
+                            $("form#formCont").trigger("reset");
+                        });
+                    });
+                }
+            });
+        }
         </script>
     
   </body>
