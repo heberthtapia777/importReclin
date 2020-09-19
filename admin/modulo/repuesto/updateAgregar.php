@@ -16,9 +16,8 @@
 	$data = stripslashes($_POST['res']);
 
 	$data = json_decode($data);
-
 	
-	// echo $strQuery; 
+	// echo $strQuery;
 
 	$sql = $db->Execute($strQuery);
 

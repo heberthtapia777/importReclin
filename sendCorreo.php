@@ -187,7 +187,7 @@ $cuerpo = '
 </html>
 ';
 
-$destinatario1 = "yudi.q@reclin.org";    //Yudi.Q@reclin.org
+$destinatario1 = "yudi.q@reclin.org";    //yudi.q@reclin.org
 
 $asunto1 = "Nueva Correo de la Pagina Web: '$data->asunto'";//"Mensaje es de prueba";
 
@@ -299,7 +299,6 @@ $cuerpo1 = '
                 '.$data->asunto.'
               </td>
             </tr>
-            
             <tr>
               <td class="h2">
                 Correo Electronico:
@@ -323,7 +322,6 @@ $cuerpo1 = '
           </table>
         </td>
       </tr>
-
       <tr>
         <td class="footer" bgcolor="#44525f">
           <table width="100%" border="0" cellspacing="0" cellpadding="0">
