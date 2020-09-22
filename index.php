@@ -301,7 +301,7 @@
     </div>
 </section>
 <section id="whatsapp">
-    <a href="https://api.whatsapp.com/send?phone=59178789470" title="contactame" target="blank"><img src="images/whatsapp.png" alt="whatsapp"></a>
+    <a href="https://api.whatsapp.com/send?phone=59171959416" title="contactame" target="blank"><img src="images/whatsapp.png" alt="whatsapp"></a>
 </section>
 <div class="mt-5 pt-5 pb-3 footer">
 	<?PHP require('footer.php'); ?>
