@@ -13,9 +13,6 @@
 					<li><a href="https://www.facebook.com/hilubasbol.rojem" target="blank"><img src="images/face3.jpg" class="img-rounded"></a></li>
 					<li><a href="https://www.facebook.com/hilubasbol.rojem" target="blank"><img src="images/face3.jpg" class="img-rounded"></a></li>
 					<li><p>Eres la visita Nº: <?=$visitas;?></p></li>
-					<li><a href="https://www.facebook.com/hilubasbol.rojem" target="blank"><img src="images/face3.jpg" class="img-rounded"></a></li>
-					<li><a href="https://www.facebook.com/hilubasbol.rojem" target="blank"><img src="images/face3.jpg" class="img-rounded"></a></li>
-					<li><a href="https://www.facebook.com/hilubasbol.rojem" target="blank"><img src="images/face3.jpg" class="img-rounded"></a></li>
 				</ul>
 			</div>
 		</div>
@@ -65,7 +62,7 @@
 		<div class="col copyright">
 			<p class="text-center">
 				<small class="text-white-50">
-					© 2020. Todos los Derechos Reservados.
+					© 2020. <a href="http://www.technosoft-bolivia.com" target="_blank" rel="noopener noreferrer">TechnoSoft</a> Todos los Derechos Reservados.
 				</small>
 			</p>
 		</div>
