@@ -9,10 +9,9 @@
 					require('countbdd.php');
 				?>
 				<ul id="lista">
-					<li><a href="https://www.facebook.com/hilubasbol.rojem" target="blank"><img src="images/face3.jpg" class="img-rounded"></a></li>
-					<li><a href="https://www.facebook.com/hilubasbol.rojem" target="blank"><img src="images/face3.jpg" class="img-rounded"></a></li>
-					<li><a href="https://www.facebook.com/hilubasbol.rojem" target="blank"><img src="images/face3.jpg" class="img-rounded"></a></li>
-					<li><p>Eres la visita Nº: <?=$visitas;?></p></li>
+					<li><div class="fb-like" data-href="http://www.reclin.org" data-width="" data-layout="button_count" data-action="like" data-size="small" data-share="false"></div></li>
+					<li><div class="fb-share-button" data-href="http://www.reclin.org" data-layout="button_count" data-size="small"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fwww.reclin.org%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Compartir</a></div></li><br>
+					<li><p style="color: #fff;">Eres la visita Nº: <?=$visitas;?></p></li>
 				</ul>
 			</div>
 		</div>
@@ -45,7 +44,7 @@
 			</h4>
 			<p>
 				<i class="far fa-street-view mr-3"></i>
-				22, Lorem ipsum dolor, consectetur adipiscing
+				El Alto / Av. Arica zona Faro Murillo Edif. El Faro
 			</p>
 			<p class="mb-0">
 				<i class="far fa-phone mr-3">
@@ -54,7 +53,7 @@
 			</p>
 			<p>
 				<i class="far fa-envelope mr-3"></i>
-				info@technosoft-bolivia.com
+				ventas@reclin.org
 			</p>
 		</div>
 	</div>
