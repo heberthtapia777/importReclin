@@ -53,7 +53,9 @@
 </head>
 <body onload="actualizaReloj()">
 <div id="fb-root"></div>
-<script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_ES/sdk.js#xfbml=1&version=v8.0" nonce="13RkfF92"></script>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v8.0" nonce="dj8ose8g"></script>
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v8.0" nonce="Wg0D8Cdx"></script>
 <!-- Modal -->
 <div class="modal fade" id="modalInicio" role="dialog">
     <div class="modal-dialog">
@@ -69,7 +71,7 @@
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                     tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
                     quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                    consequat. Duis aute irure dolor in </p>
+                    consequat. Duis aute irure dolor in house</p>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-primary" data-dismiss="modal">Cerrar</button>
@@ -296,7 +298,7 @@
     </div>
 </section>
 <section id="whatsapp">
-    <a href="https://api.whatsapp.com/send?phone=59178789470" title="contactame" target="blank"><img src="images/whatsapp.png" alt="whatsapp"></a>
+    <a href="https://api.whatsapp.com/send?phone=59171959416" title="contactame" target="blank"><img src="images/whatsapp.png" alt="whatsapp"></a>
 </section>
 <div class="mt-5 pt-5 pb-3 footer">
 	<?PHP require('footer.php'); ?>
