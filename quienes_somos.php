@@ -225,18 +225,23 @@
             </div>
             <div class="modal-body">
                 <div >
-                    <form role="form" id="Formulario" action="#" method="POST">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div id="datos_ajax"></div>
+                        </div>
+                    </div>
+                    <form role="form" id="Formulario" name="Formulario"  method="POST">
                         <div class="form-group">
                             <label class="control-label" for="Nombre">Nombres</label>
-                            <input type="text" class="form-control" id="Nombre" name="Nombre" placeholder="Introduzca su nombre" required autofocus />
+                            <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Introduzca su nombre" data-validation="required" autofocus />
                         </div>
                         <div class="form-group">
                             <label class="control-label" for="telefono">Telefono</label>
-                            <input type="text" class="form-control" id="telefono" name="telefono" placeholder="Telefono celular" required autofocus />
+                            <input type="text" class="form-control" id="telefono" name="telefono" placeholder="Telefono celular" data-validation="required" autofocus />
                         </div>
                         <div class="form-group">
                             <label class="control-label" for="Motivo">Motivo de Contacto</label>
-                            <select name="Motivo" class="form-control">
+                            <select id="motivo" name="motivo" class="form-control">
                                 <option value="Consulta General">Consulta General</option>
                                 <option value="Realizar Pedido">Realizar Pedido</option>
                                 <option value="Informe un problema">Informe de un problema</option>
@@ -244,11 +249,11 @@
                         </div>
                         <div class="form-group">
                             <label class="control-label" for="Correo">Dirección de Correo Electrónico</label>
-                            <input type="email" class="form-control" id="Correo" name="Correo" placeholder="Introduzca su correo electrónico" required />
+                            <input type="email" class="form-control" id="email" name="email" placeholder="Introduzca su correo electrónico" data-validation-optional="true" data-validation="email" />
                         </div>
                         <div class="form-group">
                             <label class="control-label" for="Mensaje">Mensaje</label>
-                            <textarea rows="5" cols="30" class="form-control" id="Mensaje" name="Mensaje" placeholder="Introduzca su mensaje" required ></textarea>
+                            <textarea rows="5" cols="30" class="form-control" id="mensaje" name="mensaje" placeholder="Introduzca su mensaje" data-validation="required" ></textarea>
                         </div>
                         <div class="form-group text-center ">
                             <input type="submit" class="btn btn-primary" value="Enviar">
@@ -294,11 +299,26 @@
 <script src="js/jquery.nivo.slider.pack.js" type="text/javascript"></script>
 <script src="js/nivo.slider.active.js" type="text/javascript"></script>
 <script src="js/owl.carousel.min.js" type="text/javascript"></script>
+<script src="js/jquery.json-2.3.js" type="text/javascript"></script>
+<script src="js/jquery.form-validator.js" type="text/javascript"></script>
 <script>
     $(document).ready(function()
     {
         // id de nuestro modal
         $("#modalInicio").modal("show");
+
+        $.validate({
+            form: '#Formulario',
+            lang: 'es',
+            modules : 'security, modules/logic',
+            onSuccess: function(data) {
+                $("form#Formulario").submit(sendEmail('sendEmail.php'));// Evento submit de jquery que llamamos al metodo SaveOrUpdate para poder registrar o modificar datos
+                return false;
+            },
+            onError : function($form) {
+                //alert('error');
+            }
+        });
     });
 </script>
 

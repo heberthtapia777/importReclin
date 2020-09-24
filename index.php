@@ -209,10 +209,7 @@
     <div class="text-center pt-4">
         <h1 class="titulo text-center display-6 font-weight-bold">Nuestros Productos</h1>
     </div>
-	<?php
-		$sql = "SELECT r.id_repuesto, f.name, r.name, r.detail FROM repuesto AS r, foto AS f WHERE r.id_repuesto = f.id_repuesto ORDER BY (r.id_repuesto) DESC";
-		$query = $db->Execute($sql);
-	?>
+	
     <div class="container mt-4 mb-4">
         <div class="row">
             <div class="col-xs-12">

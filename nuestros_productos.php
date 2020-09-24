@@ -108,7 +108,7 @@
     </div>  <!--End fondo logotipo -->
 <nav class="navbar navbar-expand-lg gris navbar-dark scrolling-navbar">
   <div class="container">
-    <a class="navbar-brand" href="#"><img src="images/logo_technosoft.png" alt="logo-technosoft" class="img-fuid" width="250" height="auto"></a>
+      <a class="navbar-brand mb-4" href="index"><img src="images/logotiporeclin.jpg" alt="logo-reclin" class="img-fuid rounded" width="250" height="40"></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -162,67 +162,74 @@
     </div>
 </section>
 <!-- Modal -->
-<div id="myModal" class="modal fade" role="dialog modal-sm">
-  <div class="modal-dialog">
-    <!-- Modal content-->
-    <div class="modal-content">
-      <div class="modal-header text-center">
-        <h5 class="modal-title">Formulario de Solicitud</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <div >
-            <form role="form" id="Formulario" action="#" method="POST">
-                <div class="form-group">
-                    <label class="control-label" for="Nombre">Nombres</label>
-                    <input type="text" class="form-control" id="Nombre" name="Nombre" placeholder="Introduzca su nombre" required autofocus />
+    <div id="myModal" class="modal fade" role="dialog modal-sm">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title text-center display-6 font-weight-bold text-light">Formulario de Solicitud</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
                 </div>
-                <div class="form-group">
-                    <label class="control-label" for="telefono">Telefono</label>
-                    <input type="text" class="form-control" id="telefono" name="telefono" placeholder="Telefono celular" required autofocus />
-                </div>
-                <div class="form-group">
-                    <label class="control-label" for="Motivo">Motivo de Contacto</label>
-                    <select name="Motivo" class="form-control">
-                        <option value="Consulta General">Consulta General</option>
-                        <option value="Realizar Pedido">Realizar Pedido</option>
-                        <option value="Informe un problema">Informe de un problema</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label class="control-label" for="Correo">Dirección de Correo Electrónico</label>
-                    <input type="email" class="form-control" id="Correo" name="Correo" placeholder="Introduzca su correo electrónico" required />
-                </div>
-                <div class="form-group">
-                    <label class="control-label" for="Mensaje">Mensaje</label>
-                    <textarea rows="5" cols="30" class="form-control" id="Mensaje" name="Mensaje" placeholder="Introduzca su mensaje" required ></textarea>
-                </div>
-                <div class="form-group text-center ">
-                    <input type="submit" class="btn btn-primary" value="Enviar">
-                    <input type="reset" class="btn btn-default" value="Limpiar">
-                </div>
-            </form>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-        <section class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="marcas">
-                        <div class="brand-list">
-                            <img src="marcas/brand01.png" alt="" class="img-thumbnail" height="60" width="auto">
-                            <img src="marcas/brand02.png" alt="" class="img-thumbnail">
-                            <img src="marcas/brand03.png" alt="" class="img-thumbnail">
-                            <img src="marcas/brand01.png" alt="" class="img-thumbnail">
+                <div class="modal-body">
+                    <div >
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div id="datos_ajax"></div>
+                            </div>
                         </div>
+                        <form role="form" id="Formulario" name="Formulario"  method="POST">
+                            <div class="form-group">
+                                <label class="control-label" for="Nombre">Nombres</label>
+                                <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Introduzca su nombre" data-validation="required" autofocus />
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label" for="telefono">Telefono</label>
+                                <input type="text" class="form-control" id="telefono" name="telefono" placeholder="Telefono celular" data-validation="required" autofocus />
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label" for="Motivo">Motivo de Contacto</label>
+                                <select id="motivo" name="motivo" class="form-control">
+                                    <option value="Consulta General">Consulta General</option>
+                                    <option value="Realizar Pedido">Realizar Pedido</option>
+                                    <option value="Informe un problema">Informe de un problema</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label" for="Correo">Dirección de Correo Electrónico</label>
+                                <input type="email" class="form-control" id="email" name="email" placeholder="Introduzca su correo electrónico" data-validation-optional="true" data-validation="email" />
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label" for="Mensaje">Mensaje</label>
+                                <textarea rows="5" cols="30" class="form-control" id="mensaje" name="mensaje" placeholder="Introduzca su mensaje" data-validation="required" ></textarea>
+                            </div>
+                            <div class="form-group text-center ">
+                                <input type="submit" class="btn btn-primary" value="Enviar">
+                                <input type="reset" class="btn btn-default" value="Limpiar">
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </div>
+    <section class="container">
+        <div class="row">
+            <div class="col-md-3 mb-3">
+                <img src="marcas/lg-electronics.jpg" alt="lg" class="img-fluid img-thumbnail">
+            </div>
+            <div class="col-md-3 mb-3">
+                <img src="marcas/electrolux.png" alt="electrolux" class="img-fluid img-thumbnail">
+            </div>
+            <div class="col-md-3 mb-3">
+                <img src="marcas/daewoo.png" alt="daewoo" class="img-fluid img-thumbnail">
+            </div>
+            <div class="col-md-3 mb-3">
+                <img src="marcas/samsung.png" alt="samsung" class="img-fluid img-thumbnail">
+            </div>
+        </div>
+    </section>
     <div class="mt-5 pt-5 pb-3 footer">
 	    <?PHP require('footer.php'); ?>
     </div>
@@ -238,13 +245,27 @@
     <script src="js/jquery.nivo.slider.pack.js" type="text/javascript"></script>
     <script src="js/nivo.slider.active.js" type="text/javascript"></script>
     <script src="js/owl.carousel.min.js" type="text/javascript"></script>
-    
+    <script src="js/jquery.json-2.3.js" type="text/javascript"></script>
+    <script src="js/jquery.form-validator.js" type="text/javascript"></script>
         <script>
         $(document).ready(function()
         {
           // id de nuestro modal
           //$("#modalInicio").modal("show");
             load(1);
+
+            $.validate({
+                form: '#Formulario',
+                lang: 'es',
+                modules : 'security, modules/logic',
+                onSuccess: function(data) {
+                    $("form#Formulario").submit(sendEmail('sendEmail.php'));// Evento submit de jquery que llamamos al metodo SaveOrUpdate para poder registrar o modificar datos
+                    return false;
+                },
+                onError : function($form) {
+                    //alert('error');
+                }
+            });
         });
         function load(page){
             var parametros = {"action":"ajax","page":page};
