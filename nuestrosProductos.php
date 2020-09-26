@@ -57,13 +57,15 @@
 					}
 				?>
 			</div>
-			
-			<div class="row clearfix">
-				<div class="table-pagination pull-right">
-					<?php echo paginate($reload, $page, $total_pages, $adjacents);?>
-				</div>
-			</div>
-			
+
+            <div class="row clearfix">
+                <div class="col-md-12">
+                    <nav aria-label="Page navigation example">
+						<?php echo paginate($reload, $page, $total_pages, $adjacents);?>
+                    </nav>
+                </div>
+            </div>
+   
 			<?php
 			
 		} else {

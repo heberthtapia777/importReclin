@@ -8,8 +8,8 @@
 	
 
 	# conectare la base de datos
-	$con=@mysqli_connect('localhost', 'bd_importReclin', 'M;ijiT+]k?wJ', 'bd_importReclin');
-    //$con=@mysqli_connect('localhost', 'root', 'mysql', 'bd_admin');
+	//$con=@mysqli_connect('localhost', 'bd_importReclin', 'M;ijiT+]k?wJ', 'bd_importReclin');
+    $con=@mysqli_connect('localhost', 'root', 'mysql', 'bd_admin');
     if(!$con){
         die("imposible conectarse: ".mysqli_error($con));
     }
@@ -21,7 +21,7 @@
 		include 'pagination.php'; //incluir el archivo de paginación
 		//las variables de paginación
 		$page = (isset($_REQUEST['page']) && !empty($_REQUEST['page']))?$_REQUEST['page']:1;
-		$per_page = 10; //la cantidad de registros que desea mostrar
+		$per_page = 9; //la cantidad de registros que desea mostrar
 		$adjacents  = 4; //brecha entre páginas después de varios adyacentes
 		$offset = ($page - 1) * $per_page;
 		//Cuenta el número total de filas de la tabla*/
@@ -59,11 +59,13 @@
 			</div>
 		
 			<div class="row clearfix">
-				<div class="table-pagination pull-right">
-				<?php echo paginate($reload, $page, $total_pages, $adjacents);?>
-				</div>
+                <div class="col-md-12">
+                    <nav aria-label="Page navigation example">
+                    <?php echo paginate($reload, $page, $total_pages, $adjacents);?>
+                    </nav>
+                </div>
 			</div>
-		
+   
 			<?php
 			
 		} else {

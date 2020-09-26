@@ -76,13 +76,13 @@
         </button>
         <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
             <ul class="navbar-nav">
-                <li class="nav-item ml-4">
+                <li class="nav-item">
                     <a class="nav-link" href="index">Inicio</a>
                 </li>
-                <li class="nav-item ml-4">
+                <li class="nav-item">
                     <a class="nav-link" href="quienes_somos">Quienes somos</a>
                 </li>
-                <li class="nav-item dropdown ml-4">
+                <li class="nav-item dropdown activo">
                     <a class="nav-link dropdown-toggle active" href="nuestros-servicios" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Nuestros productos</a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
 						<?php
@@ -90,13 +90,13 @@
 							$exe = $db->Execute($q);
 							while ($reg = $exe->FetchRow()){
 								?>
-                                <a class="dropdown-item ml-4" href="nuestros_productos?idCat=<?=$reg['id_categoria'];?>&name=<?=$reg['name']?>"><?=$reg['name'];?></a>
+                                <a class="dropdown-item" href="nuestros_productos?idCat=<?=$reg['id_categoria'];?>&name=<?=$reg['name']?>"><?=$reg['name'];?></a>
 								<?PHP
 							}
 						?>
                     </div>
                 </li>
-                <li class="nav-item ml-4">
+                <li class="nav-item">
                     <a class="nav-link" href="contactanos">Contactanos</a>
                 </li>
             </ul>
