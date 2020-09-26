@@ -11,7 +11,7 @@
 				<ul id="lista">
 					<li><div class="fb-like" data-href="http://www.reclin.org" data-width="" data-layout="button_count" data-action="like" data-size="small" data-share="false"></div></li>
 					<li><div class="fb-share-button" data-href="http://www.reclin.org" data-layout="button_count" data-size="small"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fwww.reclin.org%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Compartir</a></div></li><br>
-					<li><p style="color: #fff;">Eres la visita Nº: <?=$visitas;?></p></li>
+					<li><p style="color: #fff;">Eres la visita Nº: <?=$op->ceros($visitas, 5);?></p></li>
 				</ul>
 			</div>
 		</div>

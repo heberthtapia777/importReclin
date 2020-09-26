@@ -5,32 +5,35 @@
 	 * Date: 30/8/2020
 	 * Time: 04:42
 	 */
-	
-	
 	# conectare la base de datos
-	//$con=@mysqli_connect('localhost', 'root', 'mysql', 'bd_admin');
-	$con=@mysqli_connect('localhost', 'bd_importReclin', 'M;ijiT+]k?wJ', 'bd_importReclin');
-	if(!$con){
-		die("imposible conectarse: ".mysqli_error($con));
-	}
-	if (@mysqli_connect_errno()) {
-		die("Connect failed: ".mysqli_connect_errno()." : ". mysqli_connect_error());
-	}
+	include 'admin/adodb5/adodb.inc.php';
+	include 'admin/inc/function.php';
+	
+	$db = NewADOConnection('mysqli');
+	//$db->debug = true;
+	$db->Connect();
+	
+	$op = new cnFunction();
+	
 	$action = (isset($_REQUEST['action'])&& $_REQUEST['action'] !=NULL)?$_REQUEST['action']:'';
 	if($action == 'ajax'){
 		include 'pagination.php'; //incluir el archivo de paginación
 		//las variables de paginación
 		$page = (isset($_REQUEST['page']) && !empty($_REQUEST['page']))?$_REQUEST['page']:1;
-		$per_page = 10; //la cantidad de registros que desea mostrar
+		$per_page = 9; //la cantidad de registros que desea mostrar
 		$adjacents  = 4; //brecha entre páginas después de varios adyacentes
 		$offset = ($page - 1) * $per_page;
 		//Cuenta el número total de filas de la tabla*/
-		$count_query   = mysqli_query($con,"SELECT count(*) AS numrows FROM repuesto AS r, foto AS f WHERE r.id_repuesto = f.id_repuesto AND r.id_categoria = ".$_GET['idCat']."");
-		if ($row= mysqli_fetch_array($count_query)){$numrows = $row['numrows'];}
+		//$count_query   = mysqli_query($con,"SELECT count(*) AS numrows FROM repuesto AS r, foto AS f WHERE r.id_repuesto = f.id_repuesto AND r.id_categoria = ".$_GET['idCat']."");
+		$count_query = "SELECT count(*) AS numrows FROM repuesto AS r, foto AS f WHERE r.id_repuesto = f.id_repuesto AND r.id_categoria = ".$_GET['idCat']."";
+		$sql = $db->Execute($count_query);
+		
+		if ($row = $sql->FetchRow()){$numrows = $row['numrows'];}
 		$total_pages = ceil($numrows/$per_page);
 		$reload = 'index.php';
 		//consulta principal para recuperar los datos
-		$query = mysqli_query($con,"SELECT r.id_repuesto, f.name, r.name, r.detail FROM repuesto AS r, foto AS f  WHERE r.id_repuesto = f.id_repuesto AND r.id_categoria = ".$_GET['idCat']." order by r.id_repuesto LIMIT $offset,$per_page");
+		$query = "SELECT r.id_repuesto, f.name, r.name, r.detail FROM repuesto AS r, foto AS f  WHERE r.id_repuesto = f.id_repuesto AND r.id_categoria = ".$_GET['idCat']." order by r.id_repuesto LIMIT $offset,$per_page";
+		$query = $db->Execute($query);
 		
 		//$sql = "SELECT r.id_repuesto, f.name, r.name, r.detail FROM repuesto AS r, foto AS f WHERE r.id_repuesto = f.id_repuesto ORDER BY (r.id_repuesto) DESC";
 		
@@ -38,7 +41,7 @@
 			?>
 			<div class="row">
 				<?php
-					while($row = mysqli_fetch_array($query)){
+					while($row = $query->FetchRow()){
 						?>
 						<div class="col-md-4">
 							<div class="card mt-4 mb-4 border-dark">
