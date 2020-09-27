@@ -91,7 +91,7 @@
             <div class="col-md-6 col-xs-12">
                 <div class="user-menu">
                     <ul>
-                        <li style="padding: 5px;"><i class="far fa-phone mr-2"></i>Contactanos Cel No. (+591) 787-894-70  /  725-589-72</li>
+                        <li style="padding: 5px;"><i class="far fa-phone mr-2"></i>Contactanos Cel No. (+591) 701-72501  /  795-25696</li>
                     </ul>
                 </div>
             </div>
@@ -296,7 +296,7 @@
     </div>
 </section>
 <section id="whatsapp">
-    <a href="https://api.whatsapp.com/send?phone=59171959416" title="contactame" target="blank"><img src="images/whatsapp.png" alt="whatsapp"></a>
+    <a href="https://api.whatsapp.com/send?phone=59170172501" title="contactame" target="blank"><img src="images/whatsapp.png" alt="whatsapp"></a>
 </section>
 <div class="mt-5 pt-5 pb-3 footer">
 	<?PHP require('footer.php'); ?>
