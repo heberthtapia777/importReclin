@@ -31,7 +31,12 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+    <meta property="og:url"           content="http://www.reclin.org" />
+    <meta property="og:type"          content="website" />
+    <meta property="og:title"         content="Accesorios Reclin" />
+    <meta property="og:description"   content="Venta de accesorios, para lavadoras, microondas, cocinas" />
+    <meta property="og:image"         content="http://www.reclin.org/images/logotiporeclin.jpg" />
+    <link rel="shortcut icon" type="image/x-icon" href="images/icono-reclin.ico" />
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="fontawesome/css/fontawesome.css">
@@ -45,30 +50,29 @@
     <title>Importadora RECLIN</title>
 </head>
 <body onload="actualizaReloj()">
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v8.0" nonce="dj8ose8g"></script>
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v8.0" nonce="Wg0D8Cdx"></script>
 <!-- Modal -->
 <div class="modal fade" id="modalInicio" role="dialog">
     <div class="modal-dialog">
         <!-- Modal content-->
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title text-center">Formulario de Solicitud</h5>
+                <h3 class="modal-title text-center display-6 font-weight-bold text-light ml-5">ACCESORIOS RECLIN</h3>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
             <div class="modal-body">
-                <div>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                     tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
                     quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                    consequat. Duis aute irure dolor in </p>
-                <div>
-                    <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
-                </div>
+                    consequat. Duis aute irure dolor in house</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal">Cerrar</button>
             </div>
         </div>
     </div>
@@ -93,7 +97,7 @@
         </div>
     </div>
 </div> <!-- End header area -->
-<div class="fondo">
+<!--<div class="fondo">
     <div class="container">
         <div class="row">
             <div class="col-md-12">
@@ -103,10 +107,10 @@
             </div>
         </div>
     </div>
-</div>  <!--End fondo logotipo -->
+</div>  End fondo logotipo -->
 <nav class="navbar navbar-expand-lg gris navbar-dark scrolling-navbar">
     <div class="container">
-        <a class="navbar-brand mb-4" href="index"><img src="images/logotiporeclin.jpg" alt="logo-reclin" class="img-fuid rounded" width="250" height="40"></a>
+        <a class="navbar-brand" href="index"><img src="images/logotiporeclin.jpg" alt="logo-reclin" class="img-fuid rounded" width="250" height="40"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -140,7 +144,10 @@
     </div>
 </nav>
 <section class="gradiente">
-    <div class="container pt-5">
+    <div class="text-center pt-4 pb-2">
+        <h2 class="titulo">Nuestros Contactos</h2>
+    </div>
+    <div class="container pt-4 pb-4">
     	<div class="row pt-4 pb-4">
     		<div class="col-md-6">
     			<img src="images/electrodomesticos.jpg" class="img-fluid">
