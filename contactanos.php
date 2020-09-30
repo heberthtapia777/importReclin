@@ -90,7 +90,7 @@
             <div class="col-md-6">
                 <div class="user-menu">
                     <ul>
-                        <li style="padding: 10px;"><i class="fas fa-phone mr-2"></i>Tel No. (+591) 787-894-70 / 725-589-72</li>
+                        <li style="padding: 10px;"><i class="fas fa-phone mr-2"></i>Tel No. (+591) 701-72501 / 795-25696</li>
                     </ul>
                 </div>
             </div>
@@ -149,52 +149,66 @@
     </div>
     <div class="container pt-4 pb-4">
     	<div class="row pt-4 pb-4">
-    		<div class="col-md-6">
-    			<img src="images/electrodomesticos.jpg" class="img-fluid">
+    		<div class="col-md-7 pb-3">
+    			<img src="images/electrodomesticos.jpg" class="img-fluid rounded" alt="tienda reclin"  height="400" width="auto">
     		</div>
-            <div class="col-md-6">
+            <div class="col-md-5">
                 <div class="row">
                     <div class="col-md-12">
                         <div id="datos_ajax"></div>
                     </div>
                 </div>
-                <div class="wrapper mb-4">
-                    <h2 class="subtitulo mb-3">Escribenos</h2>
-                    <form id="formCont" name="formCont"  accept-charset="utf-8" class="mb-5">
-                        <div class="input-field">
-                            <input type="text" name="nombre" id="nombre" data-validation="required">
-                            <label>Nombre</label>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div id="datos_ajax"></div>
+                    </div>
+                </div>
+                <div class="box">
+                        <h2 class="subtitulo">
+                            Escribenos
+                        </h2>
+                    <form id="formCont" name="formCont" method="POST" action="">
+                        <div class="mt-3">
+                            <div class="input-box mb-2">
+                                <input type="text" placeholder="Nombre completo" name="nombre" id="nombre" data-validation="required">
+                            </div>
                         </div>
-                        <div class="input-field">
-                            <input type="email" name="email" id="email" value="" placeholder="" data-validation="email" data-validation-optional="true">
-                            <label>Correo</label>
+                        <div class="mt-3">
+                            <div class="input-box mb-2">
+                                <input type="email" name="email" id="email" value="" placeholder="Email" data-validation="email" data-validation-optional="true">
+                            </div>
                         </div>
-                        <div class="input-field">
-                            <input type="phone" name="telefono" id="telefono" data-validation="required">
-                            <label>Telefono</label>
+                        <div class="mt-3">
+                            <div class="input-box mb-2">
+                                <input type="text" max="999999999" placeholder="Numero de telefono" name="telefono" id="telefono" data-validation="required">
+                            </div>
                         </div>
-                        <div class="input-field">
-                            <input type="text" name="asunto" id="asunto" data-validation="required">
-                            <label>Asunto</label>
+                        <div class="mt-3">
+                            <div class="input-box mb-2">
+                                <input type="text" placeholder="Asunto" name="asunto" id="asunto" data-validation="required">
+                            </div>
                         </div>
-                        <div class="input-field">
-                            <textarea name="mensaje" id="mensaje" rows="5" data-validation="required"></textarea>
-                            <label>Mensaje</label>
+                        <div class="mt-3">
+                            <textarea placeholder="Mensaje" name="mensaje" id="mensaje" rows="5" data-validation="required"></textarea>
                         </div>
-                        <input type="submit" value="Enviar mensaje" class="btn-enviar">
+                        <div class="form-group mb-10 text-center">
+                            <button class="btn btn-primary" type="submit" name="submit">Enviar</button>
+                            <button class="btn btn-success" type="reset" name="reset">Limpiar</button>
+                        </div>
                     </form>
                 </div>
             </div>
         </div>
     </div>
 </section>
+
 <section class="map">
     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3825.2686560786674!2d-68.15622238513565!3d-16.51252918860841!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTbCsDMwJzQ1LjEiUyA2OMKwMDknMTQuNSJX!5e0!3m2!1ses!2sbo!4v1597898204479!5m2!1ses!2sbo" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
 </section>
 <section id="whatsapp">
-    <a href="https://api.whatsapp.com/send?phone=59178789470" title="contactame" target="blank"><img src="images/whatsapp.png" alt="whatsapp"></a>
+    <a href="https://api.whatsapp.com/send?phone=59170172501" title="contactame" target="blank"><img src="images/whatsapp.png" alt="whatsapp"></a>
 </section>
-<div class="pt-5 pb-3 footer">
+<div class="pt-3 pb-2 footer">
 	<?PHP require('footer.php'); ?>
 </div>
     <!-- Optional JavaScript -->
@@ -256,3 +270,10 @@
     
   </body>
 </html>
+<style>
+    .input-box span {
+        position: absolute;
+        top: 47px;
+        color: #2C4B8A;
+    }
+</style>
