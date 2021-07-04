@@ -47,6 +47,8 @@
     <link href="css/style.css" rel="stylesheet" type="text/css">
     <script src="js/cargareloj.js"></script>
     <link rel="stylesheet" href="css/owl.carousel.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
     <title>Importadora RECLIN</title>
 </head>
 <body onload="actualizaReloj()">
@@ -66,10 +68,13 @@
                 </button>
             </div>
             <div class="modal-body">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                    consequat. Duis aute irure dolor in house</p>
+                <h4 class="subtitulo">Horario de atencion Tienda Faro murillo</h4>
+                <p>De lunes a viernes de 09:00 am a 18:00 pm</p>
+                <p>Sábado de 09:00 a 13:00</p>
+                <hr>
+                <h4 class="subtitulo">Horario de atencion Tienda San pedro</h4>
+                <p>De lunes a viernes de 09:00 am a 18:00 pm</p>
+                <p>Sábado de 09:00 a 13:00</p>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-primary" data-dismiss="modal">Cerrar</button>
@@ -90,7 +95,7 @@
             <div class="col-md-6">
                 <div class="user-menu">
                     <ul>
-                        <li style="padding: 10px;"><i class="fas fa-phone mr-2"></i>Tel No. (+591) 701-72501 / 795-25696</li>
+                        <li style="padding: 5px;"><i class="far fa-phone mr-2"></i>Cel No. (+591) 795-25696  / 772-88087</li>
                     </ul>
                 </div>
             </div>
@@ -152,12 +157,7 @@
     		<div class="col-md-7 pb-3">
     			<img src="images/electrodomesticos.jpg" class="img-fluid rounded" alt="tienda reclin"  height="400" width="auto">
     		</div>
-            <div class="col-md-5">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div id="datos_ajax"></div>
-                    </div>
-                </div>
+            <div class="col-md-5">                
                 <div class="row">
                     <div class="col-md-12">
                         <div id="datos_ajax"></div>
@@ -206,7 +206,7 @@
     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3825.2686560786674!2d-68.15622238513565!3d-16.51252918860841!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTbCsDMwJzQ1LjEiUyA2OMKwMDknMTQuNSJX!5e0!3m2!1ses!2sbo!4v1597898204479!5m2!1ses!2sbo" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
 </section>
 <section id="whatsapp">
-    <a href="https://api.whatsapp.com/send?phone=59170172501" title="contactame" target="blank"><img src="images/whatsapp.png" alt="whatsapp"></a>
+    <a href="https://api.whatsapp.com/send?phone=59177288087" title="contactame" target="blank"><img src="images/whatsapp.png" alt="whatsapp"></a>
 </section>
 <div class="pt-3 pb-2 footer">
 	<?PHP require('footer.php'); ?>

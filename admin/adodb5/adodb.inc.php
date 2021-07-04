@@ -538,15 +538,15 @@ if (!defined('_ADODB_LAYER')) {
 	function Connect($argHostname = "", $argUsername = "", $argPassword = "", $argDatabaseName = "", $forceNew = false)
 	{
 		// MODIFICADO
-		$argHostname = "localhost";
+		/*$argHostname = "localhost";
 		$argUsername = "root";
 		$argPassword = "mysql";//d4rkm1nd    -password
-		$argDatabaseName = "bd_admin";
+		$argDatabaseName = "bd_admin";*/
 
-		/*$argHostname = "localhost";
-		$argUsername = "bd_importReclin";
-		$argPassword = "M;ijiT+]k?wJ";
-		$argDatabaseName = "bd_importReclin"; */
+		$argHostname = "gator4166.hostgator.com";
+		$argUsername = "sstei207_imporRe";
+		$argPassword = "7?9r]CJwrE+~";
+		$argDatabaseName = "sstei207_importReclin";
 		
 
 		if ($argHostname != "") $this->host = $argHostname;

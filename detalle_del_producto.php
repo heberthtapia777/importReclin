@@ -31,11 +31,15 @@
     <link href="css/style.css" rel="stylesheet" type="text/css">
     <script src="js/cargareloj.js"></script>
     <link rel="stylesheet" href="css/owl.carousel.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
     <title>ACCESORIOS RECLIN</title>
 </head>
 <body onload="actualizaReloj()">
 <div id="fb-root"></div>
-<script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_ES/sdk.js#xfbml=1&version=v8.0" nonce="13RkfF92"></script>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v8.0" nonce="dj8ose8g"></script>
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v8.0" nonce="Wg0D8Cdx"></script>
 <div class="header-area">
     <div class="container">
         <div class="row">
@@ -48,9 +52,9 @@
             </div>
             <div class="col-md-6 col-xs-12">
                 <div class="user-menu">
-                    <ul>
-                        <li style="padding: 5px;"><i class="far fa-phone mr-2"></i>Contactanos Cel No. (+591) 787-894-70  /  725-589-72</li>
-                    </ul>
+                        <ul>
+                            <li style="padding: 5px;"><i class="far fa-phone mr-2"></i>Cel No. (+591) 795-25696  / 772-88087</li>
+                        </ul>
                 </div>
             </div>
         </div>
@@ -187,7 +191,7 @@
                                                  src="admin/modulo/repuesto/uploads/files/<?=$reg[1]?>"
                                                  alt="Card image cap">
                                             <div class="card-body">
-                                                <h4 class="card-title"><?=$reg[2]?></h4>
+                                                <h4 class="subtitulo"><?=$reg[2]?></h4>
                                                 <p class="card-text"><?=$reg[3]?></p>
                                                 <a class="btn btn-primary" href="detalle_del_producto?idPro=<?=$reg[0];?>">Detalle</a>
                                             </div>
@@ -252,9 +256,9 @@
     </div>
 </div> <!-- End brands area -->
 <section id="whatsapp">
-    <a href="https://api.whatsapp.com/send?phone=59178789470" title="contactame" target="blank"><img src="images/whatsapp.png" alt="whatsapp"></a>
+    <a href="https://api.whatsapp.com/send?phone=59177288087" title="contactame" target="blank"><img src="images/whatsapp.png" alt="whatsapp"></a>
 </section>
-<div class="mt-5 pt-5 pb-3 footer">
+<div class="mt-3 pt-3 pb-2 footer">
 	<?PHP require('footer.php'); ?>
 </div>
 <!-- Optional JavaScript -->

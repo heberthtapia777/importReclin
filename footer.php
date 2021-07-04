@@ -1,7 +1,7 @@
 <div class="container">
 	<div class="row">
 		<div class="col-lg-5 col-xs-12">
-			<h4 class="mt-lg-0 mt-sm-3 display-8 font-weight-bold">
+			<h4 class="mt-lg-0 mt-sm-3 display-8 ">
 				Accesorios RECLIN
 			</h4>
 			<div class="csssmenu">
@@ -16,7 +16,7 @@
 			</div>
 		</div>
 		<div class="col-lg-3 col-xs-12 links">
-			<h4 class="mt-lg-0 mt-sm-3 display-8 font-weight-bold">
+			<h4 class="mt-lg-0 mt-sm-3 display-8 ">
 				Nuestros enlaces
 			</h4>
 			<ul class="m-0 p-0">
@@ -39,18 +39,37 @@
 			</ul>
 		</div>
 		<div class="col-lg-4 col-xs-12 location">
-			<h4 class="mt-lg-0 mt-sm-4 display-8 font-weight-bold">
+			<h4 class="mt-lg-0 mt-sm-4 display-8 ">
 				Nuestra ubicacion
 			</h4>
 			<p>
 				<i class="far fa-street-view mr-3"></i>
 				El Alto / Av. Arica zona Faro Murillo Edif. El Faro
 			</p>
-			<p class="mb-0">
-				<i class="far fa-phone mr-3">
-				</i>
-				(541) 754-3010
+			<p>
+				<i class="far fa-street-view mr-3"></i>
+				San Pedro / Calle Arturo costa de la torre (ex yacuma) N° 1347
 			</p>
+			<div class="links">
+			<ul class="m-0 p-0">
+				<li>
+					<i class="fas fa-mobile-alt mr-3"></i>
+					795-25696
+				</li>
+				<li>
+					<i class="fas fa-mobile-alt mr-3"></i>
+					772-88087
+				</li>
+				<li>
+					<i class="far fa-phone mr-3"></i>
+					2-2495299
+				</li>
+				<li>
+					<i class="far fa-phone mr-3"></i>
+					2-2281767
+				</li>
+			</ul>
+			</div>
 			<p>
 				<i class="far fa-envelope mr-3"></i>
 				ventas@reclin.org

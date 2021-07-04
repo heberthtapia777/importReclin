@@ -47,6 +47,8 @@
     <link href="css/style.css" rel="stylesheet" type="text/css">
     <script src="js/cargareloj.js"></script>
     <link rel="stylesheet" href="css/owl.carousel.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
     <title>ACCESORIOS RECLIN</title>
 </head>
 <body onload="actualizaReloj()">
@@ -64,10 +66,13 @@
                 </button>
             </div>
             <div class="modal-body">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                    consequat. Duis aute irure dolor in </p>
+                <h4 class="subtitulo">Horario de atencion Tienda Faro murillo</h4>
+                <p>De lunes a viernes de 09:00 am a 18:00 pm</p>
+                <p>Sábado de 09:00 a 13:00</p>
+                <hr>
+                <h4 class="subtitulo">Horario de atencion Tienda San pedro</h4>
+                <p>De lunes a viernes de 09:00 am a 18:00 pm</p>
+                <p>Sábado de 09:00 a 13:00</p>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-primary" data-dismiss="modal">Cerrar</button>
@@ -88,7 +93,7 @@
             <div class="col-md-6 col-xs-12">
                 <div class="user-menu">
                     <ul>
-                        <li style="padding: 5px;"><i class="far fa-phone mr-2"></i>Contactanos Cel No. (+591) 787-894-70  /  725-589-72</li>
+                        <li style="padding: 5px;"><i class="far fa-phone mr-2"></i>Cel No. (+591) 795-25696  / 772-88087</li>
                     </ul>
                 </div>
             </div>
@@ -119,8 +124,8 @@
                 <li class="nav-item">
                     <a class="nav-link" href="index">Inicio</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link activo" href="quienes_somos">Quienes somos</a>
+                <li class="nav-item activo">
+                    <a class="nav-link active" href="quienes_somos">Quienes somos</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="nuestros-servicios" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Nuestros productos</a>
@@ -152,16 +157,24 @@
             <div class="col-md-7">
                 <img src="images/electrodomesticos.jpg" class="img-fluid rounded" alt="tienda reclin"  height="400" width="auto">
             </div>
-            <div class="col-md-5">
+            <div class="col-md-5 mt-5">
                 <div class="text-center">
-                    <h2 class="subtitulo">Reseña</h2>
+                    <h2 class="subtitulo mt-3">Quienes somos</h2>
                 </div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <p style="text-align: justify;">Somos una empresa importadora y distribuidora con una amplia experiencia y  conocimiento en el rubro, de respuestos/accesorios de electrodomesticos.</p>
+                <div class="text-center">
+                    <h2 class="subtitulo mt-5">Nuestra experiencia</h2>
+                </div>
+                <p style="text-align: justify;">Contamos con una experiencia de mas de 10 años en el rubro de la distribución de repuestos/accesorios  de electrodomesticos ,brindadole una atención buena e eficaz.</p>
+                <div class="text-center">
+                    <h2 class="subtitulo mt-5">Valores</h2>
+                    <ul style="text-align: left; padding-left: 30px">
+                            <li>Honestidad</li>
+                            <li>Responsabilidad </li>
+                            <li>Puntualidad en las entregas </li>
+                            <li>Respeto </li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
@@ -170,13 +183,13 @@
             <div class="col-md-4 mb-5">
                 <div class="card border-primary">
                     <div class="card-header">
-                        <h4 class="text-center display-6 font-weight-bold text-light">OBJETIVO</h4>
+                        <h4 class="text-center display-6 font-weight-bold text-light">OBJETIVOS</h4>
                     </div>
                     <div class="card-body">
-                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                            consequat. Duis aute irure dolor in  laborum.</p>
+                        <ul style="text-align: left; padding-left: 10px">
+                            <li>Proveer a la poblacion en general accesorios para electrodomesticos que sean  confiables,garantizados y duraderos .</li>
+                            <li>Brindar una atencion y orientacion  acorde a la solicitud  de nuestra clientela.</li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -186,7 +199,7 @@
                         <h4 class="text-center display-6 font-weight-bold text-light">MISION</h4>
                     </div>
                     <div class="card-body">
-                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores beatae quaerat corporiCorporis dolorem quaerat ut repudiandae magnam vel at voluptatum, alias adipisci nisi rem laborum asperiores excepturi. Harum voluptatibus, asperiores non rerum voluptates sunt id quasi totam quisquam placeat cupiditate quo?</p>
+                        <p class="card-text" style="text-align: justify;">Brindar una variedad de accesorios para electrodomesticos  de la mejor calidad,pensando en la economia del hogar Boliviano.</p>
                     </div>
                 </div>
             </div>
@@ -196,7 +209,7 @@
                         <h4 class="text-center display-6 font-weight-bold text-light">VISION</h4>
                     </div>
                     <div class="card-body">
-                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores beatae quaerat corporiCorporis dolorem quaerat ut repudiandae magnam vel at voluptatum, alias adipisci nisi rem laborum asperiores excepturi. Harum voluptatibus, asperiores non rerum voluptates sunt id quasi totam quisquam placeat cupiditate quo?</p>
+                        <p class="card-text" style="text-align: justify;">Ser lider en la industria de repuestos con la mayor gama de productos</p>
                     </div>
                 </div>
             </div>
@@ -263,26 +276,20 @@
         </div>
     </div>
 </div>
-<section class="container">
-    <div class="row">
-        <div class="col-md-3 mb-3">
-            <img src="marcas/lg-electronics.jpg" alt="lg" class="img-fluid img-thumbnail">
-        </div>
-        <div class="col-md-3 mb-3">
-            <img src="marcas/electrolux.png" alt="electrolux" class="img-fluid img-thumbnail">
-        </div>
-        <div class="col-md-3 mb-3">
-            <img src="marcas/daewoo.png" alt="daewoo" class="img-fluid img-thumbnail">
-        </div>
-        <div class="col-md-3 mb-3">
-            <img src="marcas/samsung.png" alt="samsung" class="img-fluid img-thumbnail">
-        </div>
+<section id="carrusel my-3">
+    <div class="owl-carousel owl-theme">
+        <div class="item"><img src="images/accesorios/accesorio01.jpg" alt="accesorios" class="img-fuid"></div>
+        <div class="item"><img src="images/accesorios/accesorio02.jpg" alt="accesorios" class="img-fuid"></div>
+        <div class="item"><img src="images/accesorios/accesorio03.jpg" alt="accesorios" class="img-fuid"></div>
+        <div class="item"><img src="images/accesorios/accesorio04.jpg" alt="accesorios" class="img-fuid"></div>
+        <div class="item"><img src="images/accesorios/accesorio05.jpg" alt="accesorios" class="img-fuid"></div>
+        <div class="item"><img src="images/accesorios/accesorio06.jpg" alt="accesorios" class="img-fuid"></div>
     </div>
 </section>
 <section id="whatsapp">
-    <a href="https://api.whatsapp.com/send?phone=59178789470" title="contactame" target="blank"><img src="images/whatsapp.png" alt="whatsapp"></a>
+    <a href="https://api.whatsapp.com/send?phone=59177288087" title="contactame" target="blank"><img src="images/whatsapp.png" alt="whatsapp"></a>
 </section>
-<div class="mt-5 pt-5 pb-3 footer">
+<div class="mt-3 pt-3 pb-2 footer">
 	<?PHP require('footer.php'); ?>
 </div>
 <!-- Optional JavaScript -->
@@ -299,6 +306,35 @@
 <script src="js/owl.carousel.min.js" type="text/javascript"></script>
 <script src="js/jquery.json-2.3.js" type="text/javascript"></script>
 <script src="js/jquery.form-validator.js" type="text/javascript"></script>
+<script>
+    $(document).ready(function () {
+      var owl = $(".owl-carousel");
+      owl.owlCarousel({
+        margin: 20,
+        loop: true,
+        autoplay:true,
+        //autoplayTimeout:1000,
+        autoplayHoverPause:true,
+        // autoWidth:true,
+        // center: true,
+        responsive: {
+          0: {
+            items: 2
+          },
+          480: {
+            items: 3
+          },
+          768: {
+            items: 4
+          },
+          1000: {
+            items: 4
+          }
+        }
+      });
+    });
+
+</script>
 <script>
     $(document).ready(function()
     {
