@@ -543,10 +543,10 @@ if (!defined('_ADODB_LAYER')) {
 		$argPassword = "mysql";//d4rkm1nd    -password
 		$argDatabaseName = "bd_admin";*/
 
-		$argHostname = "gator4166.hostgator.com";
+		/*$argHostname = "gator4166.hostgator.com";
 		$argUsername = "sstei207_imporRe";
 		$argPassword = "7?9r]CJwrE+~";
-		$argDatabaseName = "sstei207_importReclin";
+		$argDatabaseName = "sstei207_importReclin";*/
 		
 
 		if ($argHostname != "") $this->host = $argHostname;

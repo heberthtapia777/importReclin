@@ -9,7 +9,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
-    <meta name="author" content="Tapia">
+    <meta name="author" content="TechnoSoft - Bolivia">
     <meta name="keyword" content="">
 
     <title>ADMINISTRADOR</title>
@@ -83,8 +83,7 @@
             </div>
             <div class="top-menu">
             	<ul class="nav pull-right top-menu">
-                    <!--<li><a class="logout" href="../../">Cerrar Session</a></li>-->
-                    <li><a class="logout" href="#" onclick="outSession('<?=$_SESSION['idUser'];?>');">Cerrar Sessión</a></li>                   
+                    <li><a class="logout" href="../../">Cerrar Session</a></li>
             	</ul>
             </div>
         </header>
@@ -154,13 +153,15 @@
                               {
                                   ?>
                                   <a href="../../modulo/categoria/uploads/files/<?=($row['foto']);?>" title="<?=($row['foto']);?>" download="<?=($row['foto']);?>" data-lightbox="lightbox-admin" data-title="Optional caption.">
-                                  <img class="thumb" src="../../thumb/phpThumb.php?src=../modulo/categoria/uploads/files/<?=($row['foto']);?>&amp;w=120&amp;h=80&amp;far=1&amp;bg=FFFFFF&amp;hash=361c2f150d825e79283a1dcc44502a76" alt="">
+                                  <img src="../../resizer/resizer.php?file=../modulo/categoria/uploads/files/<?=($row['foto']);?>&width=120&height=80&action=resize&quality=100">
                                   </a>
                                   <?PHP
                               }
                               else{
-                                  ?>
-                                  <img class="thumb" src="../../thumb/phpThumb.php?src=../modulo/categoria/uploads/sin_imagen.jpg&amp;w=120&amp;h=80&amp;far=1&amp;bg=FFFFFF&amp;hash=361c2f150d825e79283a1dcc44502a76" alt="">
+                                  ?>                          
+
+                                  <img src="../../resizer/resizer.php?file=../modulo/categoria/uploads/sin_imagen.jpg&width=120&height=80&action=resize&quality=100">
+
                                   <?PHP
                               }
                               ?>
@@ -228,8 +229,8 @@
       <!--footer start-->
       <footer class="site-footer">
           <div class="text-center">
-              2018 - <a href="http://technosoft-bolivia.net" target="_blank">TechnoSoft - Bolivia</a>
-              <a href="http://technosoft-bolivia.net" class="go-top" target="_blank">
+              2020 - <a href="http://www.technosoft-bolivia.com" target="_blank">TechnoSoft-Bolivia</a>
+              <a href="http://www.technosoft-bolivia.com" class="go-top" target="_blank">
                   <i class="fa fa-angle-up"></i>
               </a>
           </div>

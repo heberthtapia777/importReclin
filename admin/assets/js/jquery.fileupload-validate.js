@@ -73,7 +73,7 @@
 
             // Error and info messages:
             messages: {
-                maxNumberOfFiles: 'Maximum number of files exceeded',
+                maxNumberOfFiles: 'Se superó el número máximo de archivos',
                 acceptFileTypes: 'File type not allowed',
                 maxFileSize: 'File is too large',
                 minFileSize: 'File is too small'

@@ -6,12 +6,8 @@
 	 * Time: 04:42
 	 */
 	# conectare la base de datos
-	include 'admin/adodb5/adodb.inc.php';
+	include 'admin/inc/conexion.php';
 	include 'admin/inc/function.php';
-	
-	$db = NewADOConnection('mysqli');
-	//$db->debug = true;
-	$db->Connect();
 	
 	$op = new cnFunction();
 	

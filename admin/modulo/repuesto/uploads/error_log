@@ -1,0 +1,26 @@
+[09-Jul-2021 22:28:15 America/Chicago] PHP Warning:  mysqli::__construct(): php_network_getaddresses: getaddrinfo failed: Name or service not known in /home4/sstei207/reclin.org/admin/modulo/repuesto/uploads/index.php on line 33
+[09-Jul-2021 22:28:15 America/Chicago] PHP Warning:  mysqli::__construct(): (HY000/2002): php_network_getaddresses: getaddrinfo failed: Name or service not known in /home4/sstei207/reclin.org/admin/modulo/repuesto/uploads/index.php on line 33
+[09-Jul-2021 22:28:15 America/Chicago] PHP Warning:  mysqli::prepare(): Couldn't fetch mysqli in /home4/sstei207/reclin.org/admin/modulo/repuesto/uploads/index.php on line 73
+[09-Jul-2021 22:28:15 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function bind_param() on bool in /home4/sstei207/reclin.org/admin/modulo/repuesto/uploads/index.php:74
+Stack trace:
+#0 /home4/sstei207/reclin.org/admin/modulo/repuesto/uploads/UploadHandler.php(324): CustomUploadHandler->set_additional_file_properties(Object(stdClass))
+#1 [internal function]: UploadHandler->get_file_object('SistemaEnfriami...')
+#2 /home4/sstei207/reclin.org/admin/modulo/repuesto/uploads/UploadHandler.php(337): array_map(Array, Array)
+#3 /home4/sstei207/reclin.org/admin/modulo/repuesto/uploads/UploadHandler.php(1303): UploadHandler->get_file_objects()
+#4 /home4/sstei207/reclin.org/admin/modulo/repuesto/uploads/UploadHandler.php(181): UploadHandler->get(true)
+#5 /home4/sstei207/reclin.org/admin/modulo/repuesto/uploads/index.php(35): UploadHandler->initialize()
+#6 /home4/sstei207/reclin.org/admin/modulo/repuesto/uploads/UploadHandler.php(170): CustomUploadHandler->initialize()
+#7 /home4/sstei207/reclin.org/admin/modulo/repuesto/uploads/index.php(107): UploadHandl in /home4/sstei207/reclin.org/admin/modulo/repuesto/uploads/index.php on line 74
+[09-Jul-2021 22:36:26 America/Chicago] PHP Warning:  mysqli::__construct(): php_network_getaddresses: getaddrinfo failed: Name or service not known in /home4/sstei207/reclin.org/admin/modulo/repuesto/uploads/index.php on line 33
+[09-Jul-2021 22:36:26 America/Chicago] PHP Warning:  mysqli::__construct(): (HY000/2002): php_network_getaddresses: getaddrinfo failed: Name or service not known in /home4/sstei207/reclin.org/admin/modulo/repuesto/uploads/index.php on line 33
+[09-Jul-2021 22:36:26 America/Chicago] PHP Warning:  mysqli::prepare(): Couldn't fetch mysqli in /home4/sstei207/reclin.org/admin/modulo/repuesto/uploads/index.php on line 73
+[09-Jul-2021 22:36:26 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function bind_param() on bool in /home4/sstei207/reclin.org/admin/modulo/repuesto/uploads/index.php:74
+Stack trace:
+#0 /home4/sstei207/reclin.org/admin/modulo/repuesto/uploads/UploadHandler.php(324): CustomUploadHandler->set_additional_file_properties(Object(stdClass))
+#1 [internal function]: UploadHandler->get_file_object('SistemaEnfriami...')
+#2 /home4/sstei207/reclin.org/admin/modulo/repuesto/uploads/UploadHandler.php(337): array_map(Array, Array)
+#3 /home4/sstei207/reclin.org/admin/modulo/repuesto/uploads/UploadHandler.php(1303): UploadHandler->get_file_objects()
+#4 /home4/sstei207/reclin.org/admin/modulo/repuesto/uploads/UploadHandler.php(181): UploadHandler->get(true)
+#5 /home4/sstei207/reclin.org/admin/modulo/repuesto/uploads/index.php(35): UploadHandler->initialize()
+#6 /home4/sstei207/reclin.org/admin/modulo/repuesto/uploads/UploadHandler.php(170): CustomUploadHandler->initialize()
+#7 /home4/sstei207/reclin.org/admin/modulo/repuesto/uploads/index.php(107): UploadHandl in /home4/sstei207/reclin.org/admin/modulo/repuesto/uploads/index.php on line 74

@@ -1,0 +1,25 @@
+[07-Sep-2020 18:06:44 UTC] PHP Notice:  Undefined index: file in /home/web10millas/public_html/reclin.org/admin/modulo/categoria/uploads/index.php on line 18
+[07-Sep-2020 21:42:49 UTC] PHP Notice:  Undefined index: file in /home/web10millas/public_html/reclin.org/admin/modulo/categoria/uploads/index.php on line 18
+[07-Sep-2020 21:47:19 UTC] PHP Notice:  Undefined index: file in /home/web10millas/public_html/reclin.org/admin/modulo/categoria/uploads/index.php on line 18
+[07-Sep-2020 21:51:40 UTC] PHP Notice:  Undefined index: file in /home/web10millas/public_html/reclin.org/admin/modulo/categoria/uploads/index.php on line 18
+[07-Sep-2020 21:51:47 UTC] PHP Notice:  Undefined index: file in /home/web10millas/public_html/reclin.org/admin/modulo/categoria/uploads/index.php on line 18
+[07-Sep-2020 21:51:58 UTC] PHP Notice:  Undefined index: file in /home/web10millas/public_html/reclin.org/admin/modulo/categoria/uploads/index.php on line 18
+[08-Sep-2020 17:22:30 UTC] PHP Notice:  Undefined index: file in /home/web10millas/public_html/reclin.org/admin/modulo/categoria/uploads/index.php on line 18
+[08-Sep-2020 23:24:46 UTC] PHP Notice:  Undefined index: file in /home/web10millas/public_html/reclin.org/admin/modulo/categoria/uploads/index.php on line 18
+[08-Sep-2020 23:26:46 UTC] PHP Notice:  Undefined index: file in /home/web10millas/public_html/reclin.org/admin/modulo/categoria/uploads/index.php on line 18
+[08-Sep-2020 23:29:49 UTC] PHP Notice:  Undefined index: file in /home/web10millas/public_html/reclin.org/admin/modulo/categoria/uploads/index.php on line 18
+[13-Oct-2020 14:36:33 UTC] PHP Notice:  Undefined index: file in /home/web10millas/public_html/reclin.org/admin/modulo/categoria/uploads/index.php on line 18
+[13-Oct-2020 14:37:46 UTC] PHP Notice:  Undefined index: file in /home/web10millas/public_html/reclin.org/admin/modulo/categoria/uploads/index.php on line 18
+[13-Oct-2020 14:39:00 UTC] PHP Notice:  Undefined index: file in /home/web10millas/public_html/reclin.org/admin/modulo/categoria/uploads/index.php on line 18
+[24-Jun-2021 16:31:50 America/Chicago] PHP Deprecated:  Methods with the same name as their class will not be constructors in a future version of PHP; ADODB_Cache_File has a deprecated constructor in /home4/sstei207/reclin.org/admin/adodb5/adodb.inc.php on line 265
+[24-Jun-2021 16:31:50 America/Chicago] PHP Deprecated:  Methods with the same name as their class will not be constructors in a future version of PHP; ADORecordSet has a deprecated constructor in /home4/sstei207/reclin.org/admin/adodb5/adodb.inc.php on line 2926
+[24-Jun-2021 16:31:50 America/Chicago] PHP Deprecated:  Methods with the same name as their class will not be constructors in a future version of PHP; ADORecordSet_array has a deprecated constructor in /home4/sstei207/reclin.org/admin/adodb5/adodb.inc.php on line 3962
+[24-Jun-2021 16:57:36 America/Chicago] PHP Deprecated:  Methods with the same name as their class will not be constructors in a future version of PHP; ADODB_Cache_File has a deprecated constructor in /home4/sstei207/reclin.org/admin/adodb5/adodb.inc.php on line 265
+[24-Jun-2021 16:57:36 America/Chicago] PHP Deprecated:  Methods with the same name as their class will not be constructors in a future version of PHP; ADORecordSet has a deprecated constructor in /home4/sstei207/reclin.org/admin/adodb5/adodb.inc.php on line 2926
+[24-Jun-2021 16:57:36 America/Chicago] PHP Deprecated:  Methods with the same name as their class will not be constructors in a future version of PHP; ADORecordSet_array has a deprecated constructor in /home4/sstei207/reclin.org/admin/adodb5/adodb.inc.php on line 3962
+[13-Jul-2021 23:10:44 America/Chicago] PHP Warning:  mysqli_real_connect(): (HY000/1045): Access denied for user ''@'localhost' (using password: NO) in /home4/sstei207/reclin.org/admin/adodb5/drivers/adodb-mysqli.inc.php on line 117
+[13-Jul-2021 23:15:21 America/Chicago] PHP Warning:  mysqli_real_connect(): (HY000/1045): Access denied for user ''@'localhost' (using password: NO) in /home4/sstei207/reclin.org/admin/adodb5/drivers/adodb-mysqli.inc.php on line 117
+[13-Jul-2021 23:19:12 America/Chicago] PHP Warning:  mysqli_real_connect(): (HY000/1045): Access denied for user ''@'localhost' (using password: NO) in /home4/sstei207/reclin.org/admin/adodb5/drivers/adodb-mysqli.inc.php on line 117
+[14-Jul-2021 15:31:35 America/Chicago] PHP Warning:  mysqli_real_connect(): (HY000/1045): Access denied for user ''@'localhost' (using password: NO) in /home4/sstei207/reclin.org/admin/adodb5/drivers/adodb-mysqli.inc.php on line 117
+[14-Jul-2021 15:31:41 America/Chicago] PHP Warning:  mysqli_real_connect(): (HY000/1045): Access denied for user ''@'localhost' (using password: NO) in /home4/sstei207/reclin.org/admin/adodb5/drivers/adodb-mysqli.inc.php on line 117
+[14-Jul-2021 15:31:59 America/Chicago] PHP Warning:  mysqli_real_connect(): (HY000/1045): Access denied for user ''@'localhost' (using password: NO) in /home4/sstei207/reclin.org/admin/adodb5/drivers/adodb-mysqli.inc.php on line 117

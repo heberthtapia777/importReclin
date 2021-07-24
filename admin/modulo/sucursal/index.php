@@ -5,11 +5,11 @@
 ?>
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="utf-8">
+  <head><meta charset="gb18030">
+    
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
-    <meta name="author" content="Dashboard">
+    <meta name="author" content="Technosoft-Bolivia">
     <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
 
     <title>ADMINISTRADOR</title>

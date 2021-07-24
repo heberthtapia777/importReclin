@@ -7,12 +7,8 @@
  */
 //error_reporting(E_ALL ^ E_WARNING);
 
-include '../../adodb5/adodb.inc.php';
+include '../../inc/conexion.php';
 include '../../inc/function.php';
-
-$db = NewADOConnection('mysqli');
-//$db->debug = true;
-$db->Connect();
 
 $op = new cnFunction();
 

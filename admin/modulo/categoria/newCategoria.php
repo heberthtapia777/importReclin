@@ -41,7 +41,7 @@ $hora = $op->Time();
 	    $('#formNew').bind('fileuploadcompleted', function (e, data) {
 	        $.each(data.files, function (index, file) {
 	        	console.log('Added file: ' + file.name);
-	        	saveImg('categoria', file.name, file.size);
+	        	//saveImg('categoria', file.name, file.size);
                 //loadImg('categoria', 'auxImg');
 	        });
 	    })

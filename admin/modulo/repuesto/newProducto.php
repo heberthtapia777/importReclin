@@ -180,7 +180,7 @@ $queryProv = $db->Execute($sql);
 					                <span class="btn btn-success btn-sm fileinput-button">
 					                    <i class="fa fa-folder-open-o" aria-hidden="true"></i>
 					                    <span>Examinar...</span>
-					                    <input type="file" id="files" name="files[]" multiple>
+					                    <input type="file" id="files" name="files[]" >
 					                </span>
 					                <button type="submit" class="btn btn-primary btn-sm start">
 					                    <i class="fa fa-upload"></i>
@@ -311,13 +311,13 @@ $queryProv = $db->Execute($sql);
 	        imageCrop: false, // Force cropped images
 	        //maxFileSize: 999,
 	        acceptFileTypes: /(\.|\/)(gif|jpe?g|png)$/i,
-	        limitMultiFileUploads: 5,
-            maxNumberOfFiles: 5
+	        limitMultiFileUploads: 1,
+            maxNumberOfFiles: 1
 	    });
 	    $('#formNew').bind('fileuploadcompleted', function (e, data) {
 	        $.each(data.files, function (index, file) {
 	        //console.log('Added file: ' + file.name);
-	        	saveImg('repuesto', file.name, file.size);
+	        	//saveImg('repuesto', file.name, file.size);
                 //loadImg('repuesto', 'auxImgEmp');
 	        });
 	    })

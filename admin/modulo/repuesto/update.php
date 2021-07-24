@@ -1,12 +1,8 @@
 <?PHP
 	session_start();
 
-	include '../../adodb5/adodb.inc.php';
+	include '../../inc/conexion.php';
 	include '../../inc/function.php';
-
-	$db = NewADOConnection('mysqli');
-
-	$db->Connect();
 
 	$op = new cnFunction();
 
@@ -25,7 +21,7 @@
 		$statusRep = 0;
 
 	$strQuery = "UPDATE repuesto SET dateReg = '".$fecha." ".$hora."', ";
-	$strQuery.= "numParte = '".$data->numParte."', name = '".$data->name."', fromRep = '".$data->fromRep."', ";
+	$strQuery.= "id_categoria = '".$data->categoria."', numParte = '".$data->numParte."', name = '".$data->name."', fromRep = '".$data->fromRep."', ";
 	$strQuery.= "priceSale = '".$data->priceSale."', priceBuy = '".$data->priceBuy."', statusRep='".$statusRep."', detail='".$data->detailU."', status = 'Activo' ";
 	$strQuery.= "WHERE id_repuesto = '".$data->idResp."' ";
 
@@ -33,7 +29,7 @@
 
 	$strQuery = "UPDATE suministra SET dateReg = '".$fecha." ".$hora."', ";
 	$strQuery.= "id_repuesto = '".$data->idResp."', id_proveedor = '".$data->proveedor."', cantidad = '".$data->cantidad."' ";
-	$strQuery.= "WHERE id_repuesto = '".$data->idResp."' AND id_proveedor =  $data->provee";
+	$strQuery.= "WHERE id_repuesto = '".$data->idResp."' "; /**AND id_proveedor =  $data->proveedor";*/
 
 	$sql = $db->Execute($strQuery);
 

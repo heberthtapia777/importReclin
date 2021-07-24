@@ -36,7 +36,7 @@ $(document).ready(function(e) {
         $('#formUpdate').bind('fileuploadcompleted', function (e, data) {
             $.each(data.files, function (index, file) {
                 //console.log('Added file: ' + file.name);
-                saveImg('categoria', file.name, file.size);
+                //saveImg('categoria', file.name, file.size);
                 //loadImg('categoria', 'auxImg');
             });
         })
@@ -52,7 +52,8 @@ $(document).ready(function(e) {
         }).always(function () {
             $(this).removeClass('fileupload-processing');
         }).done(function (result) {
-            loadImages('categoria',id_categoria);
+            //loadImages('categoria',id_categoria);
+            loadImagesMulti('categoria',id_categoria);
         });
 
     });

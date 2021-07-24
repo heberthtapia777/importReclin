@@ -1,10 +1,6 @@
 <?PHP
-	include 'admin/adodb5/adodb.inc.php';
+	include 'admin/inc/conexion.php';
 	include 'admin/inc/function.php';
-	
-	$db = NewADOConnection('mysqli');
-	//$db->debug = true;
-	$db->Connect();
 	
 	$op = new cnFunction();
 ?>
@@ -193,7 +189,7 @@
                                             <div class="card-body">
                                                 <h4 class="subtitulo"><?=$reg[2]?></h4>
                                                 <p class="card-text"><?=$reg[3]?></p>
-                                                <a class="btn btn-primary" href="detalle_del_producto?idPro=<?=$reg[0];?>">Detalle</a>
+                                                <a class="btn btn-primary" href="detalle_del_producto.php?idPro=<?=$reg[0];?>">Detalle</a>
                                             </div>
                                         </div>
                                     </div>

@@ -1,12 +1,8 @@
 <?php
 session_start();
 
-  include 'adodb5/adodb.inc.php';
+  include 'inc/conexion.php';
   include 'inc/function.php';
-
-  $db = NewADOConnection('mysqli');
-  //$db->debug = true;
-  $db->Connect();
 
   $op = new cnFunction();
 
@@ -95,52 +91,7 @@ session_start();
     <link rel="stylesheet" type="text/css" href="assets/css/myStyleChat.min.css">
 
     <script src="assets/js/chart-master/Chart.js"></script>
-
-
-
-
-
-     <!-- js placed at the end of the document so the pages load faster -->
-    <script src="assets/js/jquery-1.10.2.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="assets/js/jquery.dcjqaccordion.2.7.js"></script>
-    <script src="assets/js/jquery.scrollTo.min.js"></script>
-    <script src="assets/js/jquery.nicescroll.js" type="text/javascript"></script>
-    <script src="assets/js/jquery.sparkline.js"></script>
-
-
-    <!--common script for all pages-->
-    <script src="assets/js/common-scripts.js"></script>
-
-    <script type="text/javascript" src="assets/js/gritter/js/jquery.gritter.js"></script>
-    <script type="text/javascript" src="assets/js/gritter-conf.js"></script>
-
-    <!--script for this page-->
-    <script src="assets/js/sparkline-chart.js"></script>
-    <script src="assets/js/zabuto_calendar.js"></script>
-
-    <!-- JS para CHAT -->
-    <script src="https://js.pusher.com/4.0/pusher.min.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <script type="text/javascript" src="assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
-    <script type="text/javascript" src="assets/js/push.min.js"></script>
-    <script type="text/javascript" src="assets/js/miChat.min.js"></script>
-    <script type="text/javascript" src="assets/js/myJavaScript.js"></script>
     
-        <!--script for this page-->
-   <!-- <script type="text/javascript" src="../../assets/js/jquery.dataTables.js"></script>
-    <script type="text/javascript" src="../../assets/js/dataTables.bootstrap.js"></script>
-    <script type="text/javascript" src="../../assets/js/jquery.json-2.3.js"></script>
-    <script type="text/javascript" src="../../assets/js/jquery.form-validator.js"></script>
--->
-    
-  
-
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
   </head>
 
   <body>
@@ -242,7 +193,7 @@ session_start();
                     }
                    ?>
                  </li>
-                 <?php 
+                 <?php
                   if($_SESSION['ROL']=='ADMINISTRADOR'){
                  ?>
                   <li class="sub-menu">
@@ -367,7 +318,7 @@ session_start();
                   <div class="col-lg-9 main-chart">
 
                   	<!-- <div class="row mtbox">
-                  		
+                  	
                   	</div><!- /row mt - -->
 
 
@@ -475,7 +426,7 @@ session_start();
 								</div>
 							</div>
 						</div><!-- /col-md-4 -->
-           
+          
 
 
           </div><!-- /row -->
@@ -527,10 +478,10 @@ session_start();
                 ?>
 
                 </tbody>
-                 
+                
               </table>
               
-            </div>  
+            </div>
           <!--fin de div dinamico -->
 
           <!-- desde aca se crea div dinamicos para el tablero de inico -->
@@ -573,10 +524,10 @@ session_start();
                 ?>
 
                 </tbody>
-                 
+                
               </table>
               
-            </div>  
+            </div>
           <!--fin de div dinamico -->
 
 
@@ -777,16 +728,54 @@ session_start();
       <!--footer start-->
       <footer class="site-footer">
           <div class="text-center">
-              2018 - <a href="http://technosoft-bolivia.net" target="_blank">TechnoSoft-Bolivia</a>
-              <a href="http://technosoft-bolivia.net" class="go-top" target="_blank">
+              2020 - <a href="http://www.technosoft-bolivia.com" target="_blank">TechnoSoft-Bolivia</a>
+              <a href="http://www.technosoft-bolivia.com" class="go-top" target="_blank">
                   <i class="fa fa-angle-up"></i>
               </a>
           </div>
       </footer>
       <!--footer end-->
   </section>
+  
+  <!-- js placed at the end of the document so the pages load faster -->
+  <script src="assets/js/jquery-1.10.2.js"></script>
+  <script src="assets/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="assets/js/jquery.dcjqaccordion.2.7.js"></script>
+  <script src="assets/js/jquery.scrollTo.min.js"></script>
+  <script src="assets/js/jquery.nicescroll.js" type="text/javascript"></script>
+  <script src="assets/js/jquery.sparkline.js"></script>
 
-   
+
+  <!--common script for all pages-->
+  <script src="assets/js/common-scripts.js"></script>
+
+  <script type="text/javascript" src="assets/js/gritter/js/jquery.gritter.js"></script>
+  <script type="text/javascript" src="assets/js/gritter-conf.js"></script>
+
+  <!--script for this page-->
+  <script src="assets/js/sparkline-chart.js"></script>
+  <script src="assets/js/zabuto_calendar.js"></script>
+
+  <!-- JS para CHAT -->
+  <script src="https://js.pusher.com/4.0/pusher.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script type="text/javascript" src="assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script type="text/javascript" src="assets/js/push.min.js"></script>
+  <script type="text/javascript" src="assets/js/miChat.min.js"></script>
+  <script type="text/javascript" src="assets/js/myJavaScript.js"></script>
+
+  <!--script for this page-->
+  <!-- <script type="text/javascript" src="../../assets/js/jquery.dataTables.js"></script>
+   <script type="text/javascript" src="../../assets/js/dataTables.bootstrap.js"></script>
+   <script type="text/javascript" src="../../assets/js/jquery.json-2.3.js"></script>
+   <script type="text/javascript" src="../../assets/js/jquery.form-validator.js"></script>
+-->
+  
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
 
 
    <script type="text/javascript">
@@ -879,7 +868,7 @@ session_start();
         }
     </script>
 
-<!-- AQUI ESTA EL CODIGO DEL CHAT 
+<!-- AQUI ESTA EL CODIGO DEL CHAT
 <?PHP
   /*$sql = 'SELECT * FROM usuario AS u, empleado AS e ';
   $sql.= 'WHERE u.id_empleado = e.id_empleado ';

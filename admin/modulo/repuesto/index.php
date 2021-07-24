@@ -3,8 +3,6 @@
 
   $cargo = $_SESSION['cargo'];
 
-
-
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -12,7 +10,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
-    <meta name="author" content="Tapia">
+    <meta name="author" content="Technosoft-Bolivia">
     <meta name="keyword" content="">
 
     <title>ADMINISTRADOR</title>
@@ -154,7 +152,7 @@
                   </thead>
                   <tbody>
                   <?PHP
-                  $sql = "SELECT s.id_suministra,r.id_repuesto, c.id_categoria, c.name AS cat, r.numParte, r.stockMin, r.name, r.detail, r.fromRep, ";
+                  $sql = "SELECT s.id_suministra,r.id_repuesto, c.id_categoria, s.id_proveedor, c.name AS cat, r.numParte, r.stockMin, r.name, r.detail, r.fromRep, ";
                   $sql.= "s.cantidad, r.priceSale, r.priceBuy, r.status, r.statusRep, s.dateReg ";
                   $sql.= " FROM repuesto AS r, categoria AS c, suministra AS s  WHERE r.id_repuesto = s.id_repuesto ";
                   $sql.= "AND r.id_categoria = c.id_categoria  ORDER BY (s.dateReg) DESC ";
@@ -211,7 +209,7 @@
                                       data-numParte   =   "<?=$row['numParte']?>"
                                       data-name       =   "<?=$row['name']?>"
                                       data-idCat      =   "<?=$row['id_categoria']?>"
-                                      data-idPro      =   ""
+                                      data-idPro      =   "<?=$row['id_proveedor']?>"
                                       data-fromRep    =   "<?=$row['fromRep']?>"
                                       data-cantidad   =   "<?=$row['cantidad']?>"
                                       data-cantidadMin=   "<?=$row['stockMin']?>"
@@ -316,8 +314,8 @@
       <!--footer start-->
       <footer class="site-footer">
           <div class="text-center">
-              2018 - <a href="http://technosoft-bolivia.net" target="_blank">TechnoSoft - Bolivia</a>
-              <a href="http://technosoft-bolivia.net" class="go-top" target="_blank">
+              2020 - <a href="http://www.technosoft-bolivia.com" target="_blank">TechnoSoft-Bolivia</a>
+              <a href="http://www.technosoft-bolivia.com" class="go-top" target="_blank">
                   <i class="fa fa-angle-up"></i>
               </a>
           </div>

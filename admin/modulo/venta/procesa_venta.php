@@ -1,7 +1,7 @@
 <?php
 	session_start();
 
-	include '../../adodb5/adodb.inc.php';
+	include '../../inc/conexion.php';
 	include '../../inc/function.php';
 
 	$db = NewADOConnection('mysqli');

@@ -7,11 +7,7 @@
 	date_default_timezone_set("America/La_Paz" ) ;
 	//session_set_cookie_params(0,"/",$_SERVER["HTTP_HOST"],0);
 
-	include '../adodb5/adodb.inc.php';
-
-	$db = NewADOConnection('mysqli');
-
-	$db->Connect();
+	include '../inc/conexion.php';
 
 	$data = stripslashes($_POST['res']);
 	$data = json_decode($data);

@@ -9,7 +9,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
-    <meta name="author" content="Tapia">
+    <meta name="author" content="Technosoft-Bolivia">
     <meta name="keyword" content="">
 
     <title>ADMINISTRADOR</title>
@@ -240,8 +240,8 @@
       <!--footer start-->
       <footer class="site-footer">
           <div class="text-center">
-              2018 - <a href="http://technosoft-bolivia.net" target="_blank">TechnoSoft - Bolivia</a>
-              <a href="http://technosoft-bolivia.net" class="go-top" target="_blank">
+              2020 - <a href="http://www.technosoft-bolivia.com" target="_blank">TechnoSoft-Bolivia</a>
+              <a href="http://www.technosoft-bolivia.com" class="go-top" target="_blank">
                   <i class="fa fa-angle-up"></i>
               </a>
           </div>

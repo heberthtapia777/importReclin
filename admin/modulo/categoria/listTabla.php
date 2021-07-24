@@ -7,12 +7,8 @@
  */
 session_start();
 
-include '../../adodb5/adodb.inc.php';
+include '../../inc/conexion.php';
 include '../../inc/function.php';
-
-$db = NewADOConnection('mysqli');
-//$db->debug = true;
-$db->Connect();
 
 $op = new cnFunction();
 
@@ -97,6 +93,8 @@ $op = new cnFunction();
                                   ?>
                                   <a href="../../modulo/categoria/uploads/files/<?=($row['foto']);?>" title="<?=($row['foto']);?>" download="<?=($row['foto']);?>" data-lightbox="lightbox-admin" data-title="Optional caption.">
                                   <img class="thumb" src="../../thumb/phpThumb.php?src=../modulo/categoria/uploads/files/<?=($row['foto']);?>&amp;w=120&amp;h=80&amp;far=1&amp;bg=FFFFFF&amp;hash=361c2f150d825e79283a1dcc44502a76" alt="">
+
+                                  <img src="../../resizer/resizer.php?file=../modulo/categoria/uploads/files/<?=($row['foto']);?>&width=120&height=80&action=resize&watermark=PHPJabbers&watermark_pos=cc&color=255,255,255&quality=100">
                                   </a>
                                   <?PHP
                               }

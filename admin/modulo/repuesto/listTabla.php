@@ -7,12 +7,8 @@
  */
 session_start();
 
-include '../../adodb5/adodb.inc.php';
+include '../../inc/conexion.php';
 include '../../inc/function.php';
-
-$db = NewADOConnection('mysqli');
-//$db->debug = true;
-$db->Connect();
 
 $op = new cnFunction();
 ?>
@@ -68,7 +64,7 @@ $op = new cnFunction();
       });
     </script>
 
-             <table id="tablaList" class="table table-bordered table-striped table-condensed">
+<table id="tablaList" class="table table-bordered table-striped table-condensed" width="100%">
                   <thead>
                   <tr>
                       <th>Nº</th>
@@ -86,7 +82,7 @@ $op = new cnFunction();
                   </thead>
                   <tbody>
                   <?PHP
-                  $sql = "SELECT s.id_suministra,r.id_repuesto, c.id_categoria, c.name AS cat, r.numParte, r.stockMin, r.name, r.detail, r.fromRep, ";
+                  $sql = "SELECT s.id_suministra,r.id_repuesto, c.id_categoria, s.id_proveedor, c.name AS cat, r.numParte, r.stockMin, r.name, r.detail, r.fromRep, ";
                   $sql.= "s.cantidad, r.priceSale, r.priceBuy, r.status, r.statusRep, s.dateReg ";
                   $sql.= " FROM repuesto AS r, categoria AS c, suministra AS s  WHERE r.id_repuesto = s.id_repuesto ";
                   $sql.= "AND r.id_categoria = c.id_categoria  ORDER BY (s.dateReg) DESC ";
@@ -143,7 +139,7 @@ $op = new cnFunction();
                                       data-numParte   =   "<?=$row['numParte']?>"
                                       data-name       =   "<?=$row['name']?>"
                                       data-idCat      =   "<?=$row['id_categoria']?>"
-                                      data-idPro      =   ""
+                                      data-idPro      =   "<?=$row['id_proveedor']?>"
                                       data-fromRep    =   "<?=$row['fromRep']?>"
                                       data-cantidad   =   "<?=$row['cantidad']?>"
                                       data-cantidadMin=   "<?=$row['stockMin']?>"

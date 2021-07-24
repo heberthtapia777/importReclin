@@ -1,0 +1,2 @@
+[08-Sep-2020 19:43:48 America/La_Paz] PHP Notice:  Undefined index: id in /home/web10millas/public_html/reclin.org/admin/modulo/proveedor/editProveedor.php on line 11
+[08-Sep-2020 19:43:48 America/La_Paz] PHP Notice:  Undefined index: id in /home/web10millas/public_html/reclin.org/admin/modulo/proveedor/previewProveedor.php on line 11

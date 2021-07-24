@@ -15,10 +15,10 @@ define("DB_USER", "epiz_22312863");//Usuario de tu base de datos
 define("DB_PASS", "JHjcSLMc2tLBBF");//Contraseña del usuario de la base de datos*/
 
 
-define("DB_HOST", "gator4166.hostgator.com");//DB_HOST:  generalmente suele ser "127.0.0.1"
-define("DB_NAME", "sstei207_importReclin");//Nombre de la base de datos
-define("DB_USER", "sstei207_imporRe");//Usuario de tu base de datos
-define("DB_PASS", "7?9r]CJwrE+~");//Contraseña del usuario de la base de datos
+define("DB_HOST", "gator4225.hostgator.com");//DB_HOST:  generalmente suele ser "127.0.0.1"
+define("DB_NAME", "hosting_repuestoscat");//Nombre de la base de datos
+define("DB_USER", "hosting_admin");//Usuario de tu base de datos
+define("DB_PASS", "E-CQQJ)08K(!");//Contraseña del usuario de la base de datos
 
 /*define("DB_HOST", "ns6219.hostgator.com");//DB_HOST:  generalmente suele ser "127.0.0.1"
 define("DB_NAME", "monkydj_tractorepuestoscat");//Nombre de la base de datos

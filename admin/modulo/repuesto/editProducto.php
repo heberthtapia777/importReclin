@@ -180,7 +180,7 @@ $queryProv = $db->Execute($sql);
 					                <span class="btn btn-success btn-sm fileinput-button">
 					                    <i class="fa fa-folder-open-o" aria-hidden="true"></i>
 					                    <span>Examinar...</span>
-					                    <input type="file" id="files" name="files[]" multiple>
+					                    <input type="file" id="files" name="files[]" >
 					                </span>
 					                <button type="submit" class="btn btn-primary btn-sm start">
 					                    <i class="fa fa-upload"></i>
@@ -296,7 +296,7 @@ $queryProv = $db->Execute($sql);
 		var idResp		= button.data('idresp'); // Extraer la información de atributos de datos
 		var numParte	= button.data('numparte'); // Extraer la información de atributos de datos
 		var idCat		= button.data('idcat'); // Extraer la información de atributos de datos
-		var idPro	    = button.data('idPro'); // Extraer la información de atributos de datos
+		var idPro	    = button.data('idpro'); // Extraer la información de atributos de datos
 		var name		= button.data('name'); // Extraer la información de atributos de datos
 		var fromRep 	= button.data('fromrep'); // Extraer la información de atributos de datos
 		var cantidad  	= button.data('cantidad'); // Extraer la información de atributos de datos
@@ -320,8 +320,8 @@ $queryProv = $db->Execute($sql);
 		modal.find('.modal-body #numParte').val(numParte);
 		modal.find('.modal-body #name').val(name);
 		modal.find('.modal-body #categoria').val(idCat);
-		//modal.find('.modal-body #proveedor').val(proveedor);
-		modal.find('.modal-body #proveedor').val(0);
+		modal.find('.modal-body #proveedor').val(idPro);
+		//modal.find('.modal-body #proveedor').val(0);
 		modal.find('.modal-body #fromRep').val(fromRep);
 		modal.find('.modal-body #cantidad').val(cantidad);
 		modal.find('.modal-body #cantidadMin').val(cantidadMin);
@@ -368,14 +368,14 @@ $queryProv = $db->Execute($sql);
             imageCrop: false, // Force cropped images
             //maxFileSize: 999,
             acceptFileTypes: /(\.|\/)(gif|jpe?g|png)$/i,
-            limitMultiFileUploads: 5,
-            maxNumberOfFiles: 5
+            limitMultiFileUploads: 1,
+            maxNumberOfFiles: 1
         });
 
         $('#formUpdate').bind('fileuploadcompleted', function (e, data) {
             $.each(data.files, function (index, file) {
                 console.log('Added file: ' + file.name);
-                saveImg('repuesto', file.name, file.size);
+                //saveImg('repuesto', file.name, file.size);
                 //loadImg('repuesto', 'auxImgEmp');
             });
         })

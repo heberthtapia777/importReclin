@@ -1,11 +1,7 @@
 <!doctype html>
 <?php
-	include 'admin/adodb5/adodb.inc.php';
+	include 'admin/inc/conexion.php';
 	include 'admin/inc/function.php';
-	
-	$db = NewADOConnection('mysqli');
-	//$db->debug = true;
-	$db->Connect();
 	
 	$op = new cnFunction();
   # Iniciando la variable de control que permitirá mostrar o no el modal
@@ -111,39 +107,39 @@
     </div>
 </div>  End fondo logotipo -->
 <nav class="navbar navbar-expand-lg gris navbar-dark scrolling-navbar">
-  <div class="container">
-      <a class="navbar-brand" href="index"><img src="images/logotiporeclin.jpg" alt="logo-reclin" class="img-fuid rounded" width="250" height="40"></a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link" href="index">Inicio</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="quienes_somos">Quienes somos</a>
-        </li>
-        <li class="nav-item dropdown activo">
-          <a class="nav-link dropdown-toggle active" href="nuestros-servicios" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Nuestros productos</a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-		        <?php
-			        $q = 'SELECT * FROM categoria';
-			        $exe = $db->Execute($q);
-			        while ($reg = $exe->FetchRow()){
-				        ?>
-                        <a class="dropdown-item" href="nuestros_productos?idCat=<?=$reg['id_categoria'];?>&name=<?=$reg['name']?>"><?=$reg['name'];?></a>
-				        <?PHP
-			        }
-		        ?>
-            </div>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="contactanos">Contactanos</a>
-        </li>
-      </ul>
+    <div class="container">
+        <a class="navbar-brand" href="index"><img src="images/logotiporeclin.jpg" alt="logo-reclin" class="img-fuid rounded" width="250" height="40"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.php">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="quienes_somos.php">Quienes somos</a>
+                </li>
+                <li class="nav-item dropdown activo">
+                    <a class="nav-link dropdown-toggle active" id="navbarDropdown" role="button" data-toggle="dropdown"  aria-haspopup="true" aria-expanded="false">Nuestros productos</a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+						<?php
+							$q = 'SELECT * FROM categoria';
+							$exe = $db->Execute($q);
+							while ($reg = $exe->FetchRow()){
+								?>
+                                <a class="dropdown-item" href="nuestros_productos.php?idCat=<?=$reg['id_categoria'];?>&name=<?=$reg['name']?>"><?=$reg['name'];?></a>
+								<?PHP
+							}
+						?>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contactanos.php">Contactanos</a>
+                </li>
+            </ul>
+        </div>
     </div>
-  </div>
 </nav>
 <section class="gradiente">
     <div class="text-center pt-4 pb-4">

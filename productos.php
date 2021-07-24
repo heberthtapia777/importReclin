@@ -6,12 +6,8 @@
 	 * Time: 04:42
 	 */
 	# conectare la base de datos
-	include 'admin/adodb5/adodb.inc.php';
+	include 'admin/inc/conexion.php';
 	include 'admin/inc/function.php';
-	
-	$db = NewADOConnection('mysqli');
-	//$db->debug = true;
-	$db->Connect();
 	
 	$op = new cnFunction();
 	
@@ -51,7 +47,7 @@
                             <h5 class="card-title subtitulo text-center"><?=$row[2]?></h5>
                             <p class="card-text"><?=$row[3]?></p>
                             <div class="text-center">
-                                <a href="detalle_del_producto?idPro=<?=$row[0];?>" class="btn btn-primary">Mas detalles...</a>
+                                <a href="detalle_del_producto.php?idPro=<?=$row[0];?>" class="btn btn-primary">Mas detalles...</a>
                             </div>
                         </div>
                     </div>

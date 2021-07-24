@@ -1,10 +1,5 @@
 <?php
-include '../../adodb5/adodb.inc.php';
-
-$db = NewADOConnection('mysqli');
-//$db->debug = true;
-$db->Connect();
-
+include '../../inc/conexion.php';
 /*$sql = "TRUNCATE TABLE auxImg ";
 $strImg = $db->Execute($sql);
 */

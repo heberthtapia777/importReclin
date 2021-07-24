@@ -136,15 +136,21 @@
                         <table id="tablaList" class="table">
                                   <thead>
                                   <tr>
-                                      <th>Nº</th>
-                                      <th>Nro. Parte</th>
-                                      <th>Nombre</th>
-                                      <th>Nro Parte</th>
-                                      <th>Para Modelo</th>
-                                      <th>Precio Venta</th>
-                                      <th>Precio Compra</th>
-                                      <th>Cantidad</th>
-                                      <th>Stock Min</th>
+										<th>Nº</th>
+										<th>Nro. Parte</th>
+										<th>Nombre</th>
+										<th>Nro Parte</th>
+										<th>Para Modelo</th>
+										<th>Precio Venta</th>
+										<?php
+											if ($cargo == 'Administrador') {
+										?>
+										<th>Precio Compra</th>
+										<?php		
+											}
+										?>
+										<th>Cantidad</th>
+										<th>Stock Min</th>
                                      
                                   </tr>
                                   </thead>
@@ -162,15 +168,21 @@
                                       if(($row['cantidad'])>$row['stockMin']){
                                       ?>
                                         <tr id="tb<?=$row[0]?>" style="">
-                                          <td align="center"><?=$cont++;?></td>
-                                          <td align="center"><?=$row['numParte']?></td>
-                                          <td align="center"><?=$row['name'];?></td>
-                                          <td align="center"><?=$row['numParte']?></td>
-                                          <td align="center"><?=$row['fromRep'];?></td>
-                                          <td align="center"><?=$row['priceSale'];?></td>
-                                          <td align="center"><?=$row['priceBuy'];?></td>
-                                          <td align="center"><?=$row['cantidad'];?></td>
-                                          <td align="center"><?=$row['stockMin'];?></td>
+											<td align="center"><?=$cont++;?></td>
+											<td align="center"><?=$row['numParte']?></td>
+											<td align="center"><?=$row['name'];?></td>
+											<td align="center"><?=$row['numParte']?></td>
+											<td align="center"><?=$row['fromRep'];?></td>
+											<td align="center"><?=$row['priceSale'];?></td>
+										  	<?php
+												if ($cargo == 'Administrador') {
+											?>
+											<td align="center"><?=$row['priceBuy'];?></td>
+											<?php		
+												}
+											?>
+											<td align="center"><?=$row['cantidad'];?></td>
+											<td align="center"><?=$row['stockMin'];?></td>
                                         </tr>
                                           
                                       <?php
@@ -179,15 +191,21 @@
 
                                       ?>
                                        <tr id="tb<?=$row[0]?>" style="background-color: #e22835;color:#f9f2f2 ">
-                                          <td align="center"><?=$cont++;?></td>
-                                          <td align="center"><?=$row['numParte']?></td>
-                                          <td align="center"><?=$row['name'];?></td>
-                                           <td align="center"><?=$row['numParte']?></td>
-                                          <td align="center"><?=$row['fromRep'];?></td>
-                                          <td align="center"><?=$row['priceSale'];?></td>
-                                          <td align="center"><?=$row['priceBuy'];?></td>
-                                          <td align="center"><?=$row['cantidad'];?></td>
-                                          <td align="center"><?=$row['stockMin'];?></td>
+											<td align="center"><?=$cont++;?></td>
+											<td align="center"><?=$row['numParte']?></td>
+											<td align="center"><?=$row['name'];?></td>
+                                           	<td align="center"><?=$row['numParte']?></td>
+											<td align="center"><?=$row['fromRep'];?></td>
+											<td align="center"><?=$row['priceSale'];?></td>
+											<?php
+												if ($cargo == 'Administrador') {
+											?>
+											<td align="center"><?=$row['priceBuy'];?></td>
+											<?php		
+												}
+											?>
+											<td align="center"><?=$row['cantidad'];?></td>
+											<td align="center"><?=$row['stockMin'];?></td>
                                           
                                       </tr>
                                       <?PHP
@@ -204,7 +222,13 @@
                                         <th>Nro Parte</th>
                                         <th>Para Modelo</th>
                                         <th>Precio Venta</th>
+										<?php
+											if ($cargo == 'Administrador') {
+										?>
                                         <th>Precio Compra</th>
+										<?php		
+											}
+										?>
                                         <th>Cantidad</th>
                                         <th>Stock Min</th>
                                     </tr>
@@ -230,8 +254,8 @@
       <!--footer start-->
       <footer class="site-footer">
           <div class="text-center">
-              2018 - <a href="http://technosoft-bolivia.net" target="_blank">TechnoSoft - Bolivia</a>
-              <a href="http://technosoft-bolivia.net" class="go-top" target="_blank">
+              2020 - <a href="http://www.technosoft-bolivia.com" target="_blank">TechnoSoft-Bolivia</a>
+              <a href="http://www.technosoft-bolivia.com" class="go-top" target="_blank">
                   <i class="fa fa-angle-up"></i>
               </a>
           </div>
@@ -302,8 +326,8 @@
       });
 
 
-      $('div#sidebar').find('a#sucursal').addClass('active');
-      $('div#sidebar').find('li#listSucursal').addClass('active');
+      $('div#sidebar').find('a#inventario').addClass('active');
+      //$('div#sidebar').find('li#listSucursal').addClass('active');
     </script>
 <?PHP
     include 'newSucursal.php';

@@ -3,7 +3,12 @@
         <!-- sidebar menu start-->
         <ul class="sidebar-menu" id="nav-accordion">
 
-        	  <p class="centered"><a href="profile.html"><img src="../../modulo/empleado/uploads/files/<?php echo $_SESSION['IMAGENUSUARIO']?>" class="img-circle" width="60"></a></p>
+        	<p class="centered">
+                <a href="profile.html">
+                    <img src="../../resizer/resizer.php?file=../../modulo/empleado/uploads/files/<?=$r = ($_SESSION['IMAGENUSUARIO']) ? '$_SESSION["IMAGENUSUARIO"]' : 'sin_imagen.jpg'; ?>&width=60&height=60&action=resize&quality=100" class="img-circle">
+                </a>
+            </p>
+              
         	  <h5 class="centered"><?php  echo $_SESSION ['NOMBREUSUARIO']?><br> <?php  echo $_SESSION ['ROL']?></h5>
 
             <li class="mt">
@@ -29,7 +34,7 @@
                }
             ?>
             <li class="sub-menu">
-                <a href="javascript:;" >
+                <a id="inventario" href="javascript:;" >
                     <i class="fa fa-archive"></i>
                     <span>INVENTARIO</span>
                 </a>

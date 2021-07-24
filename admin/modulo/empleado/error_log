@@ -25,3 +25,112 @@
 [24-Jan-2018 16:55:01 America/Chicago] PHP Fatal error:  Call to a member function FetchRow() on boolean in /home1/monkydj/tractorepuestoscat.com/demo/admin/modulo/empleado/loadImages.php on line 26
 [31-Jan-2018 15:43:45 America/Chicago] PHP Fatal error:  Call to a member function FetchRow() on boolean in /home1/monkydj/tractorepuestoscat.com/demo/admin/modulo/empleado/loadImages.php on line 26
 [01-Feb-2018 15:05:03 America/Chicago] PHP Fatal error:  Call to a member function FetchRow() on boolean in /home1/monkydj/tractorepuestoscat.com/demo/admin/modulo/empleado/loadImages.php on line 26
+[07-Sep-2020 17:52:27 America/La_Paz] PHP Notice:  Undefined index: id in /home/web10millas/public_html/reclin.org/admin/modulo/empleado/previewEmpleado.php on line 11
+[07-Sep-2020 21:52:31 UTC] PHP Fatal error:  Uncaught Error: Call to a member function FetchRow() on bool in /home/web10millas/public_html/reclin.org/admin/modulo/empleado/loadImages.php:26
+Stack trace:
+#0 {main}
+  thrown in /home/web10millas/public_html/reclin.org/admin/modulo/empleado/loadImages.php on line 26
+[08-Sep-2020 23:40:14 UTC] PHP Deprecated:  Methods with the same name as their class will not be constructors in a future version of PHP; ADODB_Cache_File has a deprecated constructor in /home/web10millas/public_html/reclin.org/admin/adodb5/adodb.inc.php on line 265
+[08-Sep-2020 23:40:14 UTC] PHP Deprecated:  Methods with the same name as their class will not be constructors in a future version of PHP; ADORecordSet has a deprecated constructor in /home/web10millas/public_html/reclin.org/admin/adodb5/adodb.inc.php on line 2926
+[08-Sep-2020 23:40:14 UTC] PHP Deprecated:  Methods with the same name as their class will not be constructors in a future version of PHP; ADORecordSet_array has a deprecated constructor in /home/web10millas/public_html/reclin.org/admin/adodb5/adodb.inc.php on line 3962
+[08-Sep-2020 19:40:14 America/La_Paz] PHP Notice:  Undefined index: id in /home/web10millas/public_html/reclin.org/admin/modulo/empleado/previewEmpleado.php on line 11
+[08-Sep-2020 23:40:23 UTC] PHP Fatal error:  Uncaught Error: Call to a member function FetchRow() on bool in /home/web10millas/public_html/reclin.org/admin/modulo/empleado/loadImages.php:26
+Stack trace:
+#0 {main}
+  thrown in /home/web10millas/public_html/reclin.org/admin/modulo/empleado/loadImages.php on line 26
+[26-Nov-2020 12:26:42 America/La_Paz] PHP Notice:  Undefined index: id in /home/web10millas/public_html/reclin.org/admin/modulo/empleado/previewEmpleado.php on line 11
+[26-Nov-2020 16:26:44 UTC] PHP Fatal error:  Uncaught Error: Call to a member function FetchRow() on bool in /home/web10millas/public_html/reclin.org/admin/modulo/empleado/loadImages.php:26
+Stack trace:
+#0 {main}
+  thrown in /home/web10millas/public_html/reclin.org/admin/modulo/empleado/loadImages.php on line 26
+[24-Jun-2021 15:42:08 America/Chicago] PHP Deprecated:  Methods with the same name as their class will not be constructors in a future version of PHP; ADODB_Cache_File has a deprecated constructor in /home4/sstei207/reclin.org/admin/adodb5/adodb.inc.php on line 265
+[24-Jun-2021 15:42:08 America/Chicago] PHP Deprecated:  Methods with the same name as their class will not be constructors in a future version of PHP; ADORecordSet has a deprecated constructor in /home4/sstei207/reclin.org/admin/adodb5/adodb.inc.php on line 2926
+[24-Jun-2021 15:42:08 America/Chicago] PHP Deprecated:  Methods with the same name as their class will not be constructors in a future version of PHP; ADORecordSet_array has a deprecated constructor in /home4/sstei207/reclin.org/admin/adodb5/adodb.inc.php on line 3962
+[24-Jun-2021 15:42:12 America/Chicago] PHP Deprecated:  Methods with the same name as their class will not be constructors in a future version of PHP; ADODB_Cache_File has a deprecated constructor in /home4/sstei207/reclin.org/admin/adodb5/adodb.inc.php on line 265
+[24-Jun-2021 15:42:12 America/Chicago] PHP Deprecated:  Methods with the same name as their class will not be constructors in a future version of PHP; ADORecordSet has a deprecated constructor in /home4/sstei207/reclin.org/admin/adodb5/adodb.inc.php on line 2926
+[24-Jun-2021 15:42:12 America/Chicago] PHP Deprecated:  Methods with the same name as their class will not be constructors in a future version of PHP; ADORecordSet_array has a deprecated constructor in /home4/sstei207/reclin.org/admin/adodb5/adodb.inc.php on line 3962
+[24-Jun-2021 15:42:12 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function FetchRow() on boolean in /home4/sstei207/reclin.org/admin/modulo/empleado/loadImages.php:26
+Stack trace:
+#0 {main}
+  thrown in /home4/sstei207/reclin.org/admin/modulo/empleado/loadImages.php on line 26
+[24-Jun-2021 15:43:16 America/Chicago] PHP Deprecated:  Methods with the same name as their class will not be constructors in a future version of PHP; ADODB_Cache_File has a deprecated constructor in /home4/sstei207/reclin.org/admin/adodb5/adodb.inc.php on line 265
+[24-Jun-2021 15:43:16 America/Chicago] PHP Deprecated:  Methods with the same name as their class will not be constructors in a future version of PHP; ADORecordSet has a deprecated constructor in /home4/sstei207/reclin.org/admin/adodb5/adodb.inc.php on line 2926
+[24-Jun-2021 15:43:16 America/Chicago] PHP Deprecated:  Methods with the same name as their class will not be constructors in a future version of PHP; ADORecordSet_array has a deprecated constructor in /home4/sstei207/reclin.org/admin/adodb5/adodb.inc.php on line 3962
+[24-Jun-2021 15:43:19 America/Chicago] PHP Deprecated:  Methods with the same name as their class will not be constructors in a future version of PHP; ADODB_Cache_File has a deprecated constructor in /home4/sstei207/reclin.org/admin/adodb5/adodb.inc.php on line 265
+[24-Jun-2021 15:43:19 America/Chicago] PHP Deprecated:  Methods with the same name as their class will not be constructors in a future version of PHP; ADORecordSet has a deprecated constructor in /home4/sstei207/reclin.org/admin/adodb5/adodb.inc.php on line 2926
+[24-Jun-2021 15:43:19 America/Chicago] PHP Deprecated:  Methods with the same name as their class will not be constructors in a future version of PHP; ADORecordSet_array has a deprecated constructor in /home4/sstei207/reclin.org/admin/adodb5/adodb.inc.php on line 3962
+[24-Jun-2021 15:58:40 America/Chicago] PHP Deprecated:  Methods with the same name as their class will not be constructors in a future version of PHP; ADODB_Cache_File has a deprecated constructor in /home4/sstei207/reclin.org/admin/adodb5/adodb.inc.php on line 265
+[24-Jun-2021 15:58:40 America/Chicago] PHP Deprecated:  Methods with the same name as their class will not be constructors in a future version of PHP; ADORecordSet has a deprecated constructor in /home4/sstei207/reclin.org/admin/adodb5/adodb.inc.php on line 2926
+[24-Jun-2021 15:58:40 America/Chicago] PHP Deprecated:  Methods with the same name as their class will not be constructors in a future version of PHP; ADORecordSet_array has a deprecated constructor in /home4/sstei207/reclin.org/admin/adodb5/adodb.inc.php on line 3962
+[24-Jun-2021 15:58:53 America/Chicago] PHP Deprecated:  Methods with the same name as their class will not be constructors in a future version of PHP; ADODB_Cache_File has a deprecated constructor in /home4/sstei207/reclin.org/admin/adodb5/adodb.inc.php on line 265
+[24-Jun-2021 15:58:53 America/Chicago] PHP Deprecated:  Methods with the same name as their class will not be constructors in a future version of PHP; ADORecordSet has a deprecated constructor in /home4/sstei207/reclin.org/admin/adodb5/adodb.inc.php on line 2926
+[24-Jun-2021 15:58:53 America/Chicago] PHP Deprecated:  Methods with the same name as their class will not be constructors in a future version of PHP; ADORecordSet_array has a deprecated constructor in /home4/sstei207/reclin.org/admin/adodb5/adodb.inc.php on line 3962
+[24-Jun-2021 15:58:53 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function FetchRow() on boolean in /home4/sstei207/reclin.org/admin/modulo/empleado/loadImages.php:26
+Stack trace:
+#0 {main}
+  thrown in /home4/sstei207/reclin.org/admin/modulo/empleado/loadImages.php on line 26
+[24-Jun-2021 15:59:16 America/Chicago] PHP Deprecated:  Methods with the same name as their class will not be constructors in a future version of PHP; ADODB_Cache_File has a deprecated constructor in /home4/sstei207/reclin.org/admin/adodb5/adodb.inc.php on line 265
+[24-Jun-2021 15:59:16 America/Chicago] PHP Deprecated:  Methods with the same name as their class will not be constructors in a future version of PHP; ADORecordSet has a deprecated constructor in /home4/sstei207/reclin.org/admin/adodb5/adodb.inc.php on line 2926
+[24-Jun-2021 15:59:16 America/Chicago] PHP Deprecated:  Methods with the same name as their class will not be constructors in a future version of PHP; ADORecordSet_array has a deprecated constructor in /home4/sstei207/reclin.org/admin/adodb5/adodb.inc.php on line 3962
+[24-Jun-2021 16:01:12 America/Chicago] PHP Deprecated:  Methods with the same name as their class will not be constructors in a future version of PHP; ADODB_Cache_File has a deprecated constructor in /home4/sstei207/reclin.org/admin/adodb5/adodb.inc.php on line 265
+[24-Jun-2021 16:01:12 America/Chicago] PHP Deprecated:  Methods with the same name as their class will not be constructors in a future version of PHP; ADORecordSet has a deprecated constructor in /home4/sstei207/reclin.org/admin/adodb5/adodb.inc.php on line 2926
+[24-Jun-2021 16:01:12 America/Chicago] PHP Deprecated:  Methods with the same name as their class will not be constructors in a future version of PHP; ADORecordSet_array has a deprecated constructor in /home4/sstei207/reclin.org/admin/adodb5/adodb.inc.php on line 3962
+[24-Jun-2021 16:02:38 America/Chicago] PHP Deprecated:  Methods with the same name as their class will not be constructors in a future version of PHP; ADODB_Cache_File has a deprecated constructor in /home4/sstei207/reclin.org/admin/adodb5/adodb.inc.php on line 265
+[24-Jun-2021 16:02:38 America/Chicago] PHP Deprecated:  Methods with the same name as their class will not be constructors in a future version of PHP; ADORecordSet has a deprecated constructor in /home4/sstei207/reclin.org/admin/adodb5/adodb.inc.php on line 2926
+[24-Jun-2021 16:02:38 America/Chicago] PHP Deprecated:  Methods with the same name as their class will not be constructors in a future version of PHP; ADORecordSet_array has a deprecated constructor in /home4/sstei207/reclin.org/admin/adodb5/adodb.inc.php on line 3962
+[24-Jun-2021 16:05:10 America/Chicago] PHP Deprecated:  Methods with the same name as their class will not be constructors in a future version of PHP; ADODB_Cache_File has a deprecated constructor in /home4/sstei207/reclin.org/admin/adodb5/adodb.inc.php on line 265
+[24-Jun-2021 16:05:10 America/Chicago] PHP Deprecated:  Methods with the same name as their class will not be constructors in a future version of PHP; ADORecordSet has a deprecated constructor in /home4/sstei207/reclin.org/admin/adodb5/adodb.inc.php on line 2926
+[24-Jun-2021 16:05:10 America/Chicago] PHP Deprecated:  Methods with the same name as their class will not be constructors in a future version of PHP; ADORecordSet_array has a deprecated constructor in /home4/sstei207/reclin.org/admin/adodb5/adodb.inc.php on line 3962
+[24-Jun-2021 16:05:13 America/Chicago] PHP Deprecated:  Methods with the same name as their class will not be constructors in a future version of PHP; ADODB_Cache_File has a deprecated constructor in /home4/sstei207/reclin.org/admin/adodb5/adodb.inc.php on line 265
+[24-Jun-2021 16:05:13 America/Chicago] PHP Deprecated:  Methods with the same name as their class will not be constructors in a future version of PHP; ADORecordSet has a deprecated constructor in /home4/sstei207/reclin.org/admin/adodb5/adodb.inc.php on line 2926
+[24-Jun-2021 16:05:13 America/Chicago] PHP Deprecated:  Methods with the same name as their class will not be constructors in a future version of PHP; ADORecordSet_array has a deprecated constructor in /home4/sstei207/reclin.org/admin/adodb5/adodb.inc.php on line 3962
+[25-Jun-2021 09:06:47 America/Chicago] PHP Deprecated:  Methods with the same name as their class will not be constructors in a future version of PHP; ADODB_Cache_File has a deprecated constructor in /home4/sstei207/reclin.org/admin/adodb5/adodb.inc.php on line 265
+[25-Jun-2021 09:06:47 America/Chicago] PHP Deprecated:  Methods with the same name as their class will not be constructors in a future version of PHP; ADORecordSet has a deprecated constructor in /home4/sstei207/reclin.org/admin/adodb5/adodb.inc.php on line 2926
+[25-Jun-2021 09:06:47 America/Chicago] PHP Deprecated:  Methods with the same name as their class will not be constructors in a future version of PHP; ADORecordSet_array has a deprecated constructor in /home4/sstei207/reclin.org/admin/adodb5/adodb.inc.php on line 3962
+[25-Jun-2021 09:06:50 America/Chicago] PHP Deprecated:  Methods with the same name as their class will not be constructors in a future version of PHP; ADODB_Cache_File has a deprecated constructor in /home4/sstei207/reclin.org/admin/adodb5/adodb.inc.php on line 265
+[25-Jun-2021 09:06:50 America/Chicago] PHP Deprecated:  Methods with the same name as their class will not be constructors in a future version of PHP; ADORecordSet has a deprecated constructor in /home4/sstei207/reclin.org/admin/adodb5/adodb.inc.php on line 2926
+[25-Jun-2021 09:06:50 America/Chicago] PHP Deprecated:  Methods with the same name as their class will not be constructors in a future version of PHP; ADORecordSet_array has a deprecated constructor in /home4/sstei207/reclin.org/admin/adodb5/adodb.inc.php on line 3962
+[25-Jun-2021 09:06:50 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function FetchRow() on boolean in /home4/sstei207/reclin.org/admin/modulo/empleado/loadImages.php:26
+Stack trace:
+#0 {main}
+  thrown in /home4/sstei207/reclin.org/admin/modulo/empleado/loadImages.php on line 26
+[25-Jun-2021 09:06:56 America/Chicago] PHP Deprecated:  Methods with the same name as their class will not be constructors in a future version of PHP; ADODB_Cache_File has a deprecated constructor in /home4/sstei207/reclin.org/admin/adodb5/adodb.inc.php on line 265
+[25-Jun-2021 09:06:56 America/Chicago] PHP Deprecated:  Methods with the same name as their class will not be constructors in a future version of PHP; ADORecordSet has a deprecated constructor in /home4/sstei207/reclin.org/admin/adodb5/adodb.inc.php on line 2926
+[25-Jun-2021 09:06:56 America/Chicago] PHP Deprecated:  Methods with the same name as their class will not be constructors in a future version of PHP; ADORecordSet_array has a deprecated constructor in /home4/sstei207/reclin.org/admin/adodb5/adodb.inc.php on line 3962
+[01-Jul-2021 15:49:44 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function FetchRow() on boolean in /home4/sstei207/reclin.org/admin/modulo/empleado/loadImages.php:26
+Stack trace:
+#0 {main}
+  thrown in /home4/sstei207/reclin.org/admin/modulo/empleado/loadImages.php on line 26
+[02-Jul-2021 15:10:57 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function FetchRow() on boolean in /home4/sstei207/reclin.org/admin/modulo/empleado/loadImages.php:26
+Stack trace:
+#0 {main}
+  thrown in /home4/sstei207/reclin.org/admin/modulo/empleado/loadImages.php on line 26
+[02-Jul-2021 16:11:07 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function FetchRow() on boolean in /home4/sstei207/reclin.org/admin/modulo/empleado/loadImages.php:26
+Stack trace:
+#0 {main}
+  thrown in /home4/sstei207/reclin.org/admin/modulo/empleado/loadImages.php on line 26
+[13-Jul-2021 23:12:41 America/Chicago] PHP Warning:  mysqli_real_connect(): (HY000/1045): Access denied for user ''@'localhost' (using password: NO) in /home4/sstei207/reclin.org/admin/adodb5/drivers/adodb-mysqli.inc.php on line 117
+[13-Jul-2021 23:12:41 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function FetchRow() on bool in /home4/sstei207/reclin.org/admin/modulo/empleado/loadImages.php:26
+Stack trace:
+#0 {main}
+  thrown in /home4/sstei207/reclin.org/admin/modulo/empleado/loadImages.php on line 26
+[13-Jul-2021 23:15:41 America/Chicago] PHP Warning:  mysqli_real_connect(): (HY000/1045): Access denied for user ''@'localhost' (using password: NO) in /home4/sstei207/reclin.org/admin/adodb5/drivers/adodb-mysqli.inc.php on line 117
+[13-Jul-2021 23:15:41 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function FetchRow() on bool in /home4/sstei207/reclin.org/admin/modulo/empleado/loadImages.php:26
+Stack trace:
+#0 {main}
+  thrown in /home4/sstei207/reclin.org/admin/modulo/empleado/loadImages.php on line 26
+[13-Jul-2021 23:20:14 America/Chicago] PHP Warning:  mysqli_real_connect(): (HY000/1045): Access denied for user ''@'localhost' (using password: NO) in /home4/sstei207/reclin.org/admin/adodb5/drivers/adodb-mysqli.inc.php on line 117
+[13-Jul-2021 23:20:14 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function FetchRow() on bool in /home4/sstei207/reclin.org/admin/modulo/empleado/loadImages.php:26
+Stack trace:
+#0 {main}
+  thrown in /home4/sstei207/reclin.org/admin/modulo/empleado/loadImages.php on line 26
+[13-Jul-2021 23:20:31 America/Chicago] PHP Warning:  mysqli_real_connect(): (HY000/1045): Access denied for user ''@'localhost' (using password: NO) in /home4/sstei207/reclin.org/admin/adodb5/drivers/adodb-mysqli.inc.php on line 117
+[13-Jul-2021 23:20:31 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function FetchRow() on bool in /home4/sstei207/reclin.org/admin/modulo/empleado/loadImages.php:26
+Stack trace:
+#0 {main}
+  thrown in /home4/sstei207/reclin.org/admin/modulo/empleado/loadImages.php on line 26
+[13-Jul-2021 23:22:59 America/Chicago] PHP Warning:  mysqli_real_connect(): (HY000/1045): Access denied for user ''@'localhost' (using password: NO) in /home4/sstei207/reclin.org/admin/adodb5/drivers/adodb-mysqli.inc.php on line 117
+[13-Jul-2021 23:22:59 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function FetchRow() on bool in /home4/sstei207/reclin.org/admin/modulo/empleado/loadImages.php:26
+Stack trace:
+#0 {main}
+  thrown in /home4/sstei207/reclin.org/admin/modulo/empleado/loadImages.php on line 26

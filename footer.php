@@ -22,11 +22,11 @@
 			<ul class="m-0 p-0">
 				<li>
 					<i class="far fa-home mr-3"></i>
-					<a href="index">Inicio</a>
+					<a href="index.php">Inicio</a>
 				</li>
 				<li>
 					<i class="far fa-user mr-3"></i>
-					<a href="quienes_somos">Quienes somos</a>
+					<a href="quienes_somos.php">Quienes somos</a>
 				</li>
 				<li>
 					<i class="far fa-cogs mr-3"></i>
@@ -34,7 +34,7 @@
 				</li>
 				<li>
 					<i class="far fa-envelope mr-3"></i>
-					<a href="contactanos">Contactanos</a>
+					<a href="contactanos.php">Contactanos</a>
 				</li>
 			</ul>
 		</div>

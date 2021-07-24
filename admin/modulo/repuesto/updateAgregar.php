@@ -1,12 +1,9 @@
 <?PHP
 	session_start();
 
-	include '../../adodb5/adodb.inc.php';
+	include '../../inc/conexion.php';
 	include '../../inc/function.php';
 
-	$db = NewADOConnection('mysqli');
-
-	$db->Connect();
 
 	$op = new cnFunction();
 
@@ -16,8 +13,9 @@
 	$data = stripslashes($_POST['res']);
 
 	$data = json_decode($data);
+
 	
-	// echo $strQuery;
+	// echo $strQuery; 
 
 	$sql = $db->Execute($strQuery);
 
