@@ -7,12 +7,8 @@
  */
 session_start();
 
-include '../../adodb5/adodb.inc.php';
+include '../../inc/conexion.php';
 include '../../inc/function.php';
-
-$db = NewADOConnection('mysqli');
-//$db->debug = true;
-$db->Connect();
 
 $op = new cnFunction();
 
@@ -63,7 +59,8 @@ $op = new cnFunction();
   $('div#sidebar').find('a#proveedor').addClass('active');
   $('div#sidebar').find('li#listProveedor').addClass('active');
 </script>
-         <table id="tablaList" class="table table-striped table-bordered" cellspacing="0" width="100%">
+
+<table id="tablaList" class="table table-striped table-bordered" cellspacing="0" width="100%">
             <thead>
             <tr>
                 <th>Nº</th>

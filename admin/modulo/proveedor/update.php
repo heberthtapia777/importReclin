@@ -1,12 +1,8 @@
 <?PHP
 	session_start();
 
-	include '../../adodb5/adodb.inc.php';
+	include '../../inc/conexion.php';
 	include '../../inc/function.php';
-
-	$db = NewADOConnection('mysqli');
-
-	$db->Connect();
 
 	$op = new cnFunction();
 
@@ -14,7 +10,6 @@
 	$hora  = $op->Time();
 
 	$data  = stripslashes($_POST['res']);
-
 	$data  = json_decode($data);
 
 	//print_r($data);

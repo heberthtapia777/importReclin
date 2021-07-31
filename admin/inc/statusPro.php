@@ -1,12 +1,8 @@
 <?PHP
 	session_start();
 
-	include '../adodb5/adodb.inc.php';
-	include '../inc/function.php';
-
-	$db = NewADOConnection('mysqli');
-	//$db->debug = true;
-	$db->Connect();
+	include 'conexion.php';
+	include 'function.php';
 
 	$op = new cnFunction();
 
