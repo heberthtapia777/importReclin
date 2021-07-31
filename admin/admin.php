@@ -25,12 +25,13 @@ session_start();
     session_destroy();
     header("Location: index.php");
   }
+
   $sql = 'SELECT * ';
   $sql.= 'FROM empleado ';
   $sql.= 'WHERE id_empleado = '.$_SESSION['idEmp'].'';
+
   $reg = $db->Execute($sql);
   $row = $reg->FetchRow();
-
 
   $nombre = ltrim($row['nombre']);
   $nombre = rtrim($nombre);
@@ -38,10 +39,13 @@ session_start();
   $nom = explode(' ',$nombre);
 
   $nombre1 = strtoupper($nom[0]);
-  //$nombre2 = strtoupper($nom[1]);
-
+  $nombre2 = strtoupper($nom[1]);
 
   $apP = strtoupper($row['apP']);
+
+  $_SESSION['inc'] = $nombre1[0].''.$apP[0].'-';
+
+  $cargo = $op->toSelect($row['cargo']);
 
  // $_SESSION['inc'] = $nombre1[0].''.$apP[0].'-';
   $_SESSION['NOMBREUSUARIO']=($row['nombre'].' '.$row['apP']);

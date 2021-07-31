@@ -15,6 +15,7 @@ $strSql.= "WHERE id_cliente = '".$id."' ";
 
 $str = $db->Execute($strSql);
 $file = $str->FetchRow();
+
 ?>
 
 <script>

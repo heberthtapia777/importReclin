@@ -5,12 +5,8 @@
  * Date: 4/9/2016
  * Time: 23:31
  */
-include '../../adodb5/adodb.inc.php';
+include '../../inc/conexion.php';
 include '../../inc/function.php';
-
-$db = NewADOConnection('mysqli');
-//$db->debug = true;
-$db->Connect();
 
 $op = new cnFunction();
 

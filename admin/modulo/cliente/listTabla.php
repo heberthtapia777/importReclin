@@ -7,12 +7,8 @@
  */
 session_start();
 
-include '../../adodb5/adodb.inc.php';
+include '../../inc/conexion.php';
 include '../../inc/function.php';
-
-$db = NewADOConnection('mysqli');
-//$db->debug = true;
-$db->Connect();
 
 $op = new cnFunction();
 
@@ -51,17 +47,18 @@ $op = new cnFunction();
 
     $('input').on('ifChecked', function(event){
         id = $(this).attr('id');
-        statusEmp(id, 'Activo');
+        statusCli(id, 'Activo');
     });
     $('input').on('ifUnchecked',function(event){
         id = $(this).attr('id');
-        statusEmp(id, 'Inactivo');
+        statusCli(id, 'Inactivo');
     });
   });
 
   $('div#sidebar').find('a#empleado').addClass('active');
 </script>
- <table id="tablaList" class="table table-striped table-bordered" cellspacing="0" width="100%">
+
+<table id="tablaList" class="table table-striped table-bordered" cellspacing="0" width="100%">
             <thead>
             <tr>
                 <th>Nº</th>
@@ -82,7 +79,7 @@ $op = new cnFunction();
             $sql.= "FROM cliente ";
             //if($cargo!='adm'){
               //  $sql.= "WHERE id_empleado = '".$_SESSION['idEmp']."' ";
-            //}
+           // }
             $sql.= "ORDER BY (dateReg) DESC ";
 
             $cont = 1;
